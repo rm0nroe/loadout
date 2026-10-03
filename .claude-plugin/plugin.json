@@ -17,6 +17,7 @@
     "./skills/productivity/file-cabinet",
     "./skills/engineering/roundtable",
     "./skills/engineering/slop-radar",
-    "./skills/engineering/prune-docs"
+    "./skills/engineering/prune-docs",
+    "./skills/engineering/readme-banner"
   ]
 }

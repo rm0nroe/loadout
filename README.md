@@ -38,6 +38,7 @@ Installed as a plugin, skills are namespaced (`/rm0nroe-loadout:<skill>`). Copie
 - `ink-it`: Python 3.9+ (standard library only). Voice profiles are optional and live in `~/.config/ghostwriter/` (override with `$GHOSTWRITER_HOME`), never in this repo.
 - `load-clip`: macOS (`osascript`, `textutil`) and Python 3.
 - `prune-docs`: classifying docs needs nothing extra. Writing `.graphifyignore` and rebuilding or verifying the graph needs [graphify](https://pypi.org/project/graphifyy/) (`uv tool install graphifyy`).
+- `readme-banner`: [uv](https://docs.astral.sh/uv/) (runs the outline script and fetches `fonttools` itself) and `rsvg-convert` from librsvg (`brew install librsvg`) for render checks.
 - Everything else: nothing beyond Claude Code.
 
 ## Communication
@@ -61,6 +62,7 @@ Save where you are, clear context, pick up later. State files live in `~/.claude
 - **roundtable**: four parallel agents (product, tech lead, devil's advocate, QA) argue a decision against your actual code, then the positions are tallied into a consensus and an action plan.
 - **slop-radar**: audits a screenshot, URL or source tree for generic, AI-template design choices.
 - **prune-docs**: finds stale docs so code indexers and knowledge graphs only see live content.
+- **readme-banner**: designs a README hero banner as one self-contained SVG, wordmark converted to font outlines so it renders the same on every machine. Made this repo's banner.
 
 ## License
 

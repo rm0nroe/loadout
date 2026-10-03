@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 520" width="1600" height="520" role="img" aria-label="loadout: a survival kit of agent skills for Claude Code and Codex">
   <title>loadout</title>
-  <desc>A survival-horror attaché case. LOADOUT is stenciled in blood on a stitched leather lid beside a biohazard plate and a heart monitor reading FINE; inside lie eleven typed case files, one per skill, clipped and tabbed in blood, gold and rust by kit.</desc>
+  <desc>A survival-horror attaché case. LOADOUT is stenciled in blood on a stitched leather lid beside a biohazard plate and a heart monitor reading FINE; inside lie twelve typed case files, one per skill, clipped and tabbed in blood, gold and rust by kit.</desc>
   <!-- Wordmark set in Saira Stencil One (The Saira Project Authors), SIL Open Font License 1.1, converted to outlines.
        License text: assets/SAIRA-STENCIL-OFL.txt -->
   <defs>
@@ -57,7 +57,7 @@
     <circle cx="1489" cy="179" r="3.2" fill="#C9A15B" fill-opacity="0.6"/>
     <rect x="1102.0" y="54.0" width="148.0" height="148.0" fill="#B3141B" mask="url(#bh)"/>
     <g font-family="'Helvetica Neue', Helvetica, 'Segoe UI', sans-serif" font-weight="600" letter-spacing="3" font-size="13">
-      <text x="1250" y="96" fill="#8C7F6A">CONTENTS</text><text x="1484" y="96" fill="#E9E4D8" text-anchor="end">11 SKILLS</text>
+      <text x="1250" y="96" fill="#8C7F6A">CONTENTS</text><text x="1484" y="96" fill="#E9E4D8" text-anchor="end">12 SKILLS</text>
       <text x="1250" y="117" fill="#8C7F6A">KITS</text><text x="1484" y="117" fill="#E9E4D8" text-anchor="end">3</text>
       <text x="1250" y="138" fill="#8C7F6A">FORMAT</text><text x="1484" y="138" fill="#E9E4D8" text-anchor="end">SKILL.MD</text>
       <text x="1250" y="159" fill="#8C7F6A">LICENSE</text><text x="1484" y="159" fill="#E9E4D8" text-anchor="end">MIT</text>
@@ -74,188 +74,203 @@
   <rect x="62" y="254" width="1476" height="234" rx="8" fill="none" stroke="#C9A15B" stroke-opacity="0.5" stroke-width="1.5"/>
   <rect x="100.0" y="271" width="12" height="12" fill="#B3141B"/>
   <g font-family="'Helvetica Neue', Helvetica, 'Segoe UI', sans-serif" font-weight="700" font-size="12" letter-spacing="3.2">
-    <text x="118.0" y="281" fill="#C9A15B">COMMS</text><text x="705.3" y="281" fill="#8C7F6A" text-anchor="end">05</text>
-    <line x1="98.0" y1="290" x2="705.3" y2="290" stroke="#C9A15B" stroke-opacity="0.35"/>
+    <text x="118.0" y="281" fill="#C9A15B">COMMS</text><text x="653.0" y="281" fill="#8C7F6A" text-anchor="end">05</text>
+    <line x1="98.0" y1="290" x2="653.0" y2="290" stroke="#C9A15B" stroke-opacity="0.35"/>
   </g>
-  <g transform="rotate(1.6 150.7 389.0)">
-    <rect x="102.7" y="315" width="104" height="158" fill="#000" fill-opacity="0.55"/>
-    <rect x="88.7" y="301" width="38" height="12" rx="2" fill="#B3141B"/>
-    <rect x="98.7" y="310" width="104" height="158" fill="#D3C4A2" stroke="#8C7A58" stroke-width="1"/>
-    <line x1="108.7" y1="384" x2="192.7" y2="384" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <line x1="108.7" y1="398" x2="192.7" y2="398" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <line x1="108.7" y1="412" x2="192.7" y2="412" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <line x1="108.7" y1="426" x2="192.7" y2="426" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <line x1="108.7" y1="440" x2="192.7" y2="440" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <line x1="108.7" y1="454" x2="192.7" y2="454" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <text x="108.7" y="332" font-family="'Courier New', Courier, monospace" font-size="9" letter-spacing="1" fill="#7A6748">FILE 01</text>
-    <text x="150.7" y="362" font-family="'Courier New', Courier, monospace" font-weight="700" font-size="11.5" fill="#24160D" text-anchor="middle">INK-IT</text>
-    <rect x="108.7" y="370" width="84" height="1.4" fill="#B3141B" fill-opacity="0.8"/>
-    <path d="M176.7 328 V302 a6 6 0 0 1 12 0 V322 a3.5 3.5 0 0 1 -7 0 V306" fill="none" stroke="#C9A15B" stroke-width="2"/>
+  <g transform="rotate(1.6 145.5 389.0)">
+    <rect x="97.5" y="315" width="104" height="158" fill="#000" fill-opacity="0.55"/>
+    <rect x="83.5" y="301" width="38" height="12" rx="2" fill="#B3141B"/>
+    <rect x="93.5" y="310" width="104" height="158" fill="#D3C4A2" stroke="#8C7A58" stroke-width="1"/>
+    <line x1="103.5" y1="384" x2="187.5" y2="384" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="103.5" y1="398" x2="187.5" y2="398" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="103.5" y1="412" x2="187.5" y2="412" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="103.5" y1="426" x2="187.5" y2="426" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="103.5" y1="440" x2="187.5" y2="440" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="103.5" y1="454" x2="187.5" y2="454" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <text x="103.5" y="332" font-family="'Courier New', Courier, monospace" font-size="9" letter-spacing="1" fill="#7A6748">FILE 01</text>
+    <text x="145.5" y="362" font-family="'Courier New', Courier, monospace" font-weight="700" font-size="11.5" fill="#24160D" text-anchor="middle">INK-IT</text>
+    <rect x="103.5" y="370" width="84" height="1.4" fill="#B3141B" fill-opacity="0.8"/>
+    <path d="M171.5 328 V302 a6 6 0 0 1 12 0 V322 a3.5 3.5 0 0 1 -7 0 V306" fill="none" stroke="#C9A15B" stroke-width="2"/>
   </g>
-  <g transform="rotate(-0.8 276.2 389.0)">
-    <rect x="228.2" y="315" width="104" height="158" fill="#000" fill-opacity="0.55"/>
-    <rect x="214.2" y="301" width="38" height="12" rx="2" fill="#B3141B"/>
-    <rect x="224.2" y="310" width="104" height="158" fill="#D3C4A2" stroke="#8C7A58" stroke-width="1"/>
-    <line x1="234.2" y1="384" x2="318.2" y2="384" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <line x1="234.2" y1="398" x2="318.2" y2="398" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <line x1="234.2" y1="412" x2="318.2" y2="412" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <line x1="234.2" y1="426" x2="318.2" y2="426" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <line x1="234.2" y1="440" x2="318.2" y2="440" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <line x1="234.2" y1="454" x2="318.2" y2="454" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <text x="234.2" y="332" font-family="'Courier New', Courier, monospace" font-size="9" letter-spacing="1" fill="#7A6748">FILE 02</text>
-    <text x="276.2" y="362" font-family="'Courier New', Courier, monospace" font-weight="700" font-size="11.5" fill="#24160D" text-anchor="middle">INTEL-BRIEF</text>
-    <rect x="234.2" y="370" width="84" height="1.4" fill="#B3141B" fill-opacity="0.8"/>
-    <path d="M302.2 328 V302 a6 6 0 0 1 12 0 V322 a3.5 3.5 0 0 1 -7 0 V306" fill="none" stroke="#C9A15B" stroke-width="2"/>
+  <g transform="rotate(-0.8 260.5 389.0)">
+    <rect x="212.5" y="315" width="104" height="158" fill="#000" fill-opacity="0.55"/>
+    <rect x="198.5" y="301" width="38" height="12" rx="2" fill="#B3141B"/>
+    <rect x="208.5" y="310" width="104" height="158" fill="#D3C4A2" stroke="#8C7A58" stroke-width="1"/>
+    <line x1="218.5" y1="384" x2="302.5" y2="384" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="218.5" y1="398" x2="302.5" y2="398" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="218.5" y1="412" x2="302.5" y2="412" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="218.5" y1="426" x2="302.5" y2="426" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="218.5" y1="440" x2="302.5" y2="440" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="218.5" y1="454" x2="302.5" y2="454" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <text x="218.5" y="332" font-family="'Courier New', Courier, monospace" font-size="9" letter-spacing="1" fill="#7A6748">FILE 02</text>
+    <text x="260.5" y="362" font-family="'Courier New', Courier, monospace" font-weight="700" font-size="11.5" fill="#24160D" text-anchor="middle">INTEL-BRIEF</text>
+    <rect x="218.5" y="370" width="84" height="1.4" fill="#B3141B" fill-opacity="0.8"/>
+    <path d="M286.5 328 V302 a6 6 0 0 1 12 0 V322 a3.5 3.5 0 0 1 -7 0 V306" fill="none" stroke="#C9A15B" stroke-width="2"/>
   </g>
-  <g transform="rotate(2.4 401.6 389.0)">
-    <rect x="353.6" y="315" width="104" height="158" fill="#000" fill-opacity="0.55"/>
-    <rect x="339.6" y="301" width="38" height="12" rx="2" fill="#B3141B"/>
-    <rect x="349.6" y="310" width="104" height="158" fill="#D3C4A2" stroke="#8C7A58" stroke-width="1"/>
-    <line x1="359.6" y1="384" x2="443.6" y2="384" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <line x1="359.6" y1="398" x2="443.6" y2="398" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <line x1="359.6" y1="412" x2="443.6" y2="412" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <line x1="359.6" y1="426" x2="443.6" y2="426" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <line x1="359.6" y1="440" x2="443.6" y2="440" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <line x1="359.6" y1="454" x2="443.6" y2="454" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <text x="359.6" y="332" font-family="'Courier New', Courier, monospace" font-size="9" letter-spacing="1" fill="#7A6748">FILE 03</text>
-    <text x="401.6" y="362" font-family="'Courier New', Courier, monospace" font-weight="700" font-size="11.5" fill="#24160D" text-anchor="middle">BREAK-IT-DOWN</text>
-    <rect x="359.6" y="370" width="84" height="1.4" fill="#B3141B" fill-opacity="0.8"/>
-    <path d="M427.6 328 V302 a6 6 0 0 1 12 0 V322 a3.5 3.5 0 0 1 -7 0 V306" fill="none" stroke="#C9A15B" stroke-width="2"/>
+  <g transform="rotate(2.4 375.5 389.0)">
+    <rect x="327.5" y="315" width="104" height="158" fill="#000" fill-opacity="0.55"/>
+    <rect x="313.5" y="301" width="38" height="12" rx="2" fill="#B3141B"/>
+    <rect x="323.5" y="310" width="104" height="158" fill="#D3C4A2" stroke="#8C7A58" stroke-width="1"/>
+    <line x1="333.5" y1="384" x2="417.5" y2="384" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="333.5" y1="398" x2="417.5" y2="398" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="333.5" y1="412" x2="417.5" y2="412" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="333.5" y1="426" x2="417.5" y2="426" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="333.5" y1="440" x2="417.5" y2="440" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="333.5" y1="454" x2="417.5" y2="454" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <text x="333.5" y="332" font-family="'Courier New', Courier, monospace" font-size="9" letter-spacing="1" fill="#7A6748">FILE 03</text>
+    <text x="375.5" y="362" font-family="'Courier New', Courier, monospace" font-weight="700" font-size="11.5" fill="#24160D" text-anchor="middle">BREAK-IT-DOWN</text>
+    <rect x="333.5" y="370" width="84" height="1.4" fill="#B3141B" fill-opacity="0.8"/>
+    <path d="M401.5 328 V302 a6 6 0 0 1 12 0 V322 a3.5 3.5 0 0 1 -7 0 V306" fill="none" stroke="#C9A15B" stroke-width="2"/>
   </g>
-  <g transform="rotate(-1.6 527.1 389.0)">
-    <rect x="479.1" y="315" width="104" height="158" fill="#000" fill-opacity="0.55"/>
-    <rect x="465.1" y="301" width="38" height="12" rx="2" fill="#B3141B"/>
-    <rect x="475.1" y="310" width="104" height="158" fill="#D3C4A2" stroke="#8C7A58" stroke-width="1"/>
-    <line x1="485.1" y1="384" x2="569.1" y2="384" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <line x1="485.1" y1="398" x2="569.1" y2="398" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <line x1="485.1" y1="412" x2="569.1" y2="412" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <line x1="485.1" y1="426" x2="569.1" y2="426" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <line x1="485.1" y1="440" x2="569.1" y2="440" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <line x1="485.1" y1="454" x2="569.1" y2="454" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <text x="485.1" y="332" font-family="'Courier New', Courier, monospace" font-size="9" letter-spacing="1" fill="#7A6748">FILE 04</text>
-    <text x="527.1" y="362" font-family="'Courier New', Courier, monospace" font-weight="700" font-size="11.5" fill="#24160D" text-anchor="middle">PAINT-IT</text>
-    <rect x="485.1" y="370" width="84" height="1.4" fill="#B3141B" fill-opacity="0.8"/>
-    <path d="M553.1 328 V302 a6 6 0 0 1 12 0 V322 a3.5 3.5 0 0 1 -7 0 V306" fill="none" stroke="#C9A15B" stroke-width="2"/>
+  <g transform="rotate(-1.6 490.5 389.0)">
+    <rect x="442.5" y="315" width="104" height="158" fill="#000" fill-opacity="0.55"/>
+    <rect x="428.5" y="301" width="38" height="12" rx="2" fill="#B3141B"/>
+    <rect x="438.5" y="310" width="104" height="158" fill="#D3C4A2" stroke="#8C7A58" stroke-width="1"/>
+    <line x1="448.5" y1="384" x2="532.5" y2="384" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="448.5" y1="398" x2="532.5" y2="398" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="448.5" y1="412" x2="532.5" y2="412" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="448.5" y1="426" x2="532.5" y2="426" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="448.5" y1="440" x2="532.5" y2="440" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="448.5" y1="454" x2="532.5" y2="454" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <text x="448.5" y="332" font-family="'Courier New', Courier, monospace" font-size="9" letter-spacing="1" fill="#7A6748">FILE 04</text>
+    <text x="490.5" y="362" font-family="'Courier New', Courier, monospace" font-weight="700" font-size="11.5" fill="#24160D" text-anchor="middle">PAINT-IT</text>
+    <rect x="448.5" y="370" width="84" height="1.4" fill="#B3141B" fill-opacity="0.8"/>
+    <path d="M516.5 328 V302 a6 6 0 0 1 12 0 V322 a3.5 3.5 0 0 1 -7 0 V306" fill="none" stroke="#C9A15B" stroke-width="2"/>
   </g>
-  <g transform="rotate(-2.2 652.5 389.0)">
-    <rect x="604.5" y="315" width="104" height="158" fill="#000" fill-opacity="0.55"/>
-    <rect x="590.5" y="301" width="38" height="12" rx="2" fill="#B3141B"/>
-    <rect x="600.5" y="310" width="104" height="158" fill="#D3C4A2" stroke="#8C7A58" stroke-width="1"/>
-    <line x1="610.5" y1="384" x2="694.5" y2="384" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <line x1="610.5" y1="398" x2="694.5" y2="398" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <line x1="610.5" y1="412" x2="694.5" y2="412" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <line x1="610.5" y1="426" x2="694.5" y2="426" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <line x1="610.5" y1="440" x2="694.5" y2="440" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <line x1="610.5" y1="454" x2="694.5" y2="454" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <text x="610.5" y="332" font-family="'Courier New', Courier, monospace" font-size="9" letter-spacing="1" fill="#7A6748">FILE 05</text>
-    <text x="652.5" y="362" font-family="'Courier New', Courier, monospace" font-weight="700" font-size="11.5" fill="#24160D" text-anchor="middle">LOAD-CLIP</text>
-    <rect x="610.5" y="370" width="84" height="1.4" fill="#B3141B" fill-opacity="0.8"/>
-    <path d="M678.5 328 V302 a6 6 0 0 1 12 0 V322 a3.5 3.5 0 0 1 -7 0 V306" fill="none" stroke="#C9A15B" stroke-width="2"/>
+  <g transform="rotate(-2.2 605.5 389.0)">
+    <rect x="557.5" y="315" width="104" height="158" fill="#000" fill-opacity="0.55"/>
+    <rect x="543.5" y="301" width="38" height="12" rx="2" fill="#B3141B"/>
+    <rect x="553.5" y="310" width="104" height="158" fill="#D3C4A2" stroke="#8C7A58" stroke-width="1"/>
+    <line x1="563.5" y1="384" x2="647.5" y2="384" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="563.5" y1="398" x2="647.5" y2="398" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="563.5" y1="412" x2="647.5" y2="412" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="563.5" y1="426" x2="647.5" y2="426" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="563.5" y1="440" x2="647.5" y2="440" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="563.5" y1="454" x2="647.5" y2="454" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <text x="563.5" y="332" font-family="'Courier New', Courier, monospace" font-size="9" letter-spacing="1" fill="#7A6748">FILE 05</text>
+    <text x="605.5" y="362" font-family="'Courier New', Courier, monospace" font-weight="700" font-size="11.5" fill="#24160D" text-anchor="middle">LOAD-CLIP</text>
+    <rect x="563.5" y="370" width="84" height="1.4" fill="#B3141B" fill-opacity="0.8"/>
+    <path d="M631.5 328 V302 a6 6 0 0 1 12 0 V322 a3.5 3.5 0 0 1 -7 0 V306" fill="none" stroke="#C9A15B" stroke-width="2"/>
   </g>
-  <rect x="727.3" y="271" width="12" height="12" fill="#C9A15B"/>
+  <rect x="675.0" y="271" width="12" height="12" fill="#C9A15B"/>
   <g font-family="'Helvetica Neue', Helvetica, 'Segoe UI', sans-serif" font-weight="700" font-size="12" letter-spacing="3.2">
-    <text x="745.3" y="281" fill="#C9A15B">SESSIONS</text><text x="1081.6" y="281" fill="#8C7F6A" text-anchor="end">03</text>
-    <line x1="725.3" y1="290" x2="1081.6" y2="290" stroke="#C9A15B" stroke-opacity="0.35"/>
+    <text x="693.0" y="281" fill="#C9A15B">SESSIONS</text><text x="998.0" y="281" fill="#8C7F6A" text-anchor="end">03</text>
+    <line x1="673.0" y1="290" x2="998.0" y2="290" stroke="#C9A15B" stroke-opacity="0.35"/>
   </g>
-  <g transform="rotate(1.6 778.0 389.0)">
-    <rect x="730.0" y="315" width="104" height="158" fill="#000" fill-opacity="0.55"/>
-    <rect x="716.0" y="301" width="38" height="12" rx="2" fill="#C9A15B"/>
-    <rect x="726.0" y="310" width="104" height="158" fill="#D3C4A2" stroke="#8C7A58" stroke-width="1"/>
-    <line x1="736.0" y1="384" x2="820.0" y2="384" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <line x1="736.0" y1="398" x2="820.0" y2="398" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <line x1="736.0" y1="412" x2="820.0" y2="412" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <line x1="736.0" y1="426" x2="820.0" y2="426" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <line x1="736.0" y1="440" x2="820.0" y2="440" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <line x1="736.0" y1="454" x2="820.0" y2="454" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <text x="736.0" y="332" font-family="'Courier New', Courier, monospace" font-size="9" letter-spacing="1" fill="#7A6748">FILE 06</text>
-    <text x="778.0" y="362" font-family="'Courier New', Courier, monospace" font-weight="700" font-size="11.5" fill="#24160D" text-anchor="middle">TYPEWRITE</text>
-    <rect x="736.0" y="370" width="84" height="1.4" fill="#C9A15B" fill-opacity="0.8"/>
-    <path d="M804.0 328 V302 a6 6 0 0 1 12 0 V322 a3.5 3.5 0 0 1 -7 0 V306" fill="none" stroke="#C9A15B" stroke-width="2"/>
-    <circle cx="744.0" cy="414" r="9" fill="#6E0B10" fill-opacity="0.85"/>
-    <circle cx="756.0" cy="426" r="4" fill="#6E0B10" fill-opacity="0.85"/>
-    <circle cx="734.0" cy="434" r="3" fill="#6E0B10" fill-opacity="0.85"/>
-    <circle cx="766.0" cy="408" r="2.4" fill="#6E0B10" fill-opacity="0.85"/>
-    <circle cx="750.0" cy="446" r="2" fill="#6E0B10" fill-opacity="0.85"/>
-    <path d="M742.0 422 v26 a2.5 2.5 0 0 0 5 0 v-24 Z" fill="#6E0B10" fill-opacity="0.85"/>
+  <g transform="rotate(1.6 720.5 389.0)">
+    <rect x="672.5" y="315" width="104" height="158" fill="#000" fill-opacity="0.55"/>
+    <rect x="658.5" y="301" width="38" height="12" rx="2" fill="#C9A15B"/>
+    <rect x="668.5" y="310" width="104" height="158" fill="#D3C4A2" stroke="#8C7A58" stroke-width="1"/>
+    <line x1="678.5" y1="384" x2="762.5" y2="384" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="678.5" y1="398" x2="762.5" y2="398" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="678.5" y1="412" x2="762.5" y2="412" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="678.5" y1="426" x2="762.5" y2="426" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="678.5" y1="440" x2="762.5" y2="440" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="678.5" y1="454" x2="762.5" y2="454" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <text x="678.5" y="332" font-family="'Courier New', Courier, monospace" font-size="9" letter-spacing="1" fill="#7A6748">FILE 06</text>
+    <text x="720.5" y="362" font-family="'Courier New', Courier, monospace" font-weight="700" font-size="11.5" fill="#24160D" text-anchor="middle">TYPEWRITE</text>
+    <rect x="678.5" y="370" width="84" height="1.4" fill="#C9A15B" fill-opacity="0.8"/>
+    <path d="M746.5 328 V302 a6 6 0 0 1 12 0 V322 a3.5 3.5 0 0 1 -7 0 V306" fill="none" stroke="#C9A15B" stroke-width="2"/>
+    <circle cx="686.5" cy="414" r="9" fill="#6E0B10" fill-opacity="0.85"/>
+    <circle cx="698.5" cy="426" r="4" fill="#6E0B10" fill-opacity="0.85"/>
+    <circle cx="676.5" cy="434" r="3" fill="#6E0B10" fill-opacity="0.85"/>
+    <circle cx="708.5" cy="408" r="2.4" fill="#6E0B10" fill-opacity="0.85"/>
+    <circle cx="692.5" cy="446" r="2" fill="#6E0B10" fill-opacity="0.85"/>
+    <path d="M684.5 422 v26 a2.5 2.5 0 0 0 5 0 v-24 Z" fill="#6E0B10" fill-opacity="0.85"/>
   </g>
-  <g transform="rotate(-0.8 903.5 389.0)">
-    <rect x="855.5" y="315" width="104" height="158" fill="#000" fill-opacity="0.55"/>
-    <rect x="841.5" y="301" width="38" height="12" rx="2" fill="#C9A15B"/>
-    <rect x="851.5" y="310" width="104" height="158" fill="#D3C4A2" stroke="#8C7A58" stroke-width="1"/>
-    <line x1="861.5" y1="384" x2="945.5" y2="384" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <line x1="861.5" y1="398" x2="945.5" y2="398" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <line x1="861.5" y1="412" x2="945.5" y2="412" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <line x1="861.5" y1="426" x2="945.5" y2="426" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <line x1="861.5" y1="440" x2="945.5" y2="440" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <line x1="861.5" y1="454" x2="945.5" y2="454" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <text x="861.5" y="332" font-family="'Courier New', Courier, monospace" font-size="9" letter-spacing="1" fill="#7A6748">FILE 07</text>
-    <text x="903.5" y="362" font-family="'Courier New', Courier, monospace" font-weight="700" font-size="11.5" fill="#24160D" text-anchor="middle">PULL-FILE</text>
-    <rect x="861.5" y="370" width="84" height="1.4" fill="#C9A15B" fill-opacity="0.8"/>
-    <path d="M929.5 328 V302 a6 6 0 0 1 12 0 V322 a3.5 3.5 0 0 1 -7 0 V306" fill="none" stroke="#C9A15B" stroke-width="2"/>
+  <g transform="rotate(-0.8 835.5 389.0)">
+    <rect x="787.5" y="315" width="104" height="158" fill="#000" fill-opacity="0.55"/>
+    <rect x="773.5" y="301" width="38" height="12" rx="2" fill="#C9A15B"/>
+    <rect x="783.5" y="310" width="104" height="158" fill="#D3C4A2" stroke="#8C7A58" stroke-width="1"/>
+    <line x1="793.5" y1="384" x2="877.5" y2="384" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="793.5" y1="398" x2="877.5" y2="398" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="793.5" y1="412" x2="877.5" y2="412" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="793.5" y1="426" x2="877.5" y2="426" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="793.5" y1="440" x2="877.5" y2="440" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="793.5" y1="454" x2="877.5" y2="454" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <text x="793.5" y="332" font-family="'Courier New', Courier, monospace" font-size="9" letter-spacing="1" fill="#7A6748">FILE 07</text>
+    <text x="835.5" y="362" font-family="'Courier New', Courier, monospace" font-weight="700" font-size="11.5" fill="#24160D" text-anchor="middle">PULL-FILE</text>
+    <rect x="793.5" y="370" width="84" height="1.4" fill="#C9A15B" fill-opacity="0.8"/>
+    <path d="M861.5 328 V302 a6 6 0 0 1 12 0 V322 a3.5 3.5 0 0 1 -7 0 V306" fill="none" stroke="#C9A15B" stroke-width="2"/>
   </g>
-  <g transform="rotate(2.4 1028.9 389.0)">
-    <rect x="980.9" y="315" width="104" height="158" fill="#000" fill-opacity="0.55"/>
-    <rect x="966.9" y="301" width="38" height="12" rx="2" fill="#C9A15B"/>
-    <rect x="976.9" y="310" width="104" height="158" fill="#D3C4A2" stroke="#8C7A58" stroke-width="1"/>
-    <line x1="986.9" y1="384" x2="1070.9" y2="384" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <line x1="986.9" y1="398" x2="1070.9" y2="398" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <line x1="986.9" y1="412" x2="1070.9" y2="412" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <line x1="986.9" y1="426" x2="1070.9" y2="426" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <line x1="986.9" y1="440" x2="1070.9" y2="440" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <line x1="986.9" y1="454" x2="1070.9" y2="454" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <text x="986.9" y="332" font-family="'Courier New', Courier, monospace" font-size="9" letter-spacing="1" fill="#7A6748">FILE 08</text>
-    <text x="1028.9" y="362" font-family="'Courier New', Courier, monospace" font-weight="700" font-size="11.5" fill="#24160D" text-anchor="middle">FILE-CABINET</text>
-    <rect x="986.9" y="370" width="84" height="1.4" fill="#C9A15B" fill-opacity="0.8"/>
-    <path d="M1054.9 328 V302 a6 6 0 0 1 12 0 V322 a3.5 3.5 0 0 1 -7 0 V306" fill="none" stroke="#C9A15B" stroke-width="2"/>
+  <g transform="rotate(2.4 950.5 389.0)">
+    <rect x="902.5" y="315" width="104" height="158" fill="#000" fill-opacity="0.55"/>
+    <rect x="888.5" y="301" width="38" height="12" rx="2" fill="#C9A15B"/>
+    <rect x="898.5" y="310" width="104" height="158" fill="#D3C4A2" stroke="#8C7A58" stroke-width="1"/>
+    <line x1="908.5" y1="384" x2="992.5" y2="384" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="908.5" y1="398" x2="992.5" y2="398" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="908.5" y1="412" x2="992.5" y2="412" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="908.5" y1="426" x2="992.5" y2="426" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="908.5" y1="440" x2="992.5" y2="440" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="908.5" y1="454" x2="992.5" y2="454" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <text x="908.5" y="332" font-family="'Courier New', Courier, monospace" font-size="9" letter-spacing="1" fill="#7A6748">FILE 08</text>
+    <text x="950.5" y="362" font-family="'Courier New', Courier, monospace" font-weight="700" font-size="11.5" fill="#24160D" text-anchor="middle">FILE-CABINET</text>
+    <rect x="908.5" y="370" width="84" height="1.4" fill="#C9A15B" fill-opacity="0.8"/>
+    <path d="M976.5 328 V302 a6 6 0 0 1 12 0 V322 a3.5 3.5 0 0 1 -7 0 V306" fill="none" stroke="#C9A15B" stroke-width="2"/>
   </g>
-  <rect x="1103.6" y="271" width="12" height="12" fill="#8A5A2B"/>
+  <rect x="1020.0" y="271" width="12" height="12" fill="#8A5A2B"/>
   <g font-family="'Helvetica Neue', Helvetica, 'Segoe UI', sans-serif" font-weight="700" font-size="12" letter-spacing="3.2">
-    <text x="1121.6" y="281" fill="#C9A15B">ENGINEERING</text><text x="1458.0" y="281" fill="#8C7F6A" text-anchor="end">03</text>
-    <line x1="1101.6" y1="290" x2="1458.0" y2="290" stroke="#C9A15B" stroke-opacity="0.35"/>
+    <text x="1038.0" y="281" fill="#C9A15B">ENGINEERING</text><text x="1458.0" y="281" fill="#8C7F6A" text-anchor="end">04</text>
+    <line x1="1018.0" y1="290" x2="1458.0" y2="290" stroke="#C9A15B" stroke-opacity="0.35"/>
   </g>
-  <g transform="rotate(-1.6 1154.4 389.0)">
-    <rect x="1106.4" y="315" width="104" height="158" fill="#000" fill-opacity="0.55"/>
-    <rect x="1092.4" y="301" width="38" height="12" rx="2" fill="#8A5A2B"/>
-    <rect x="1102.4" y="310" width="104" height="158" fill="#D3C4A2" stroke="#8C7A58" stroke-width="1"/>
-    <line x1="1112.4" y1="384" x2="1196.4" y2="384" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <line x1="1112.4" y1="398" x2="1196.4" y2="398" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <line x1="1112.4" y1="412" x2="1196.4" y2="412" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <line x1="1112.4" y1="426" x2="1196.4" y2="426" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <line x1="1112.4" y1="440" x2="1196.4" y2="440" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <line x1="1112.4" y1="454" x2="1196.4" y2="454" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <text x="1112.4" y="332" font-family="'Courier New', Courier, monospace" font-size="9" letter-spacing="1" fill="#7A6748">FILE 09</text>
-    <text x="1154.4" y="362" font-family="'Courier New', Courier, monospace" font-weight="700" font-size="11.5" fill="#24160D" text-anchor="middle">ROUNDTABLE</text>
-    <rect x="1112.4" y="370" width="84" height="1.4" fill="#8A5A2B" fill-opacity="0.8"/>
-    <path d="M1180.4 328 V302 a6 6 0 0 1 12 0 V322 a3.5 3.5 0 0 1 -7 0 V306" fill="none" stroke="#C9A15B" stroke-width="2"/>
+  <g transform="rotate(-1.6 1065.5 389.0)">
+    <rect x="1017.5" y="315" width="104" height="158" fill="#000" fill-opacity="0.55"/>
+    <rect x="1003.5" y="301" width="38" height="12" rx="2" fill="#8A5A2B"/>
+    <rect x="1013.5" y="310" width="104" height="158" fill="#D3C4A2" stroke="#8C7A58" stroke-width="1"/>
+    <line x1="1023.5" y1="384" x2="1107.5" y2="384" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="1023.5" y1="398" x2="1107.5" y2="398" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="1023.5" y1="412" x2="1107.5" y2="412" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="1023.5" y1="426" x2="1107.5" y2="426" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="1023.5" y1="440" x2="1107.5" y2="440" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="1023.5" y1="454" x2="1107.5" y2="454" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <text x="1023.5" y="332" font-family="'Courier New', Courier, monospace" font-size="9" letter-spacing="1" fill="#7A6748">FILE 09</text>
+    <text x="1065.5" y="362" font-family="'Courier New', Courier, monospace" font-weight="700" font-size="11.5" fill="#24160D" text-anchor="middle">ROUNDTABLE</text>
+    <rect x="1023.5" y="370" width="84" height="1.4" fill="#8A5A2B" fill-opacity="0.8"/>
+    <path d="M1091.5 328 V302 a6 6 0 0 1 12 0 V322 a3.5 3.5 0 0 1 -7 0 V306" fill="none" stroke="#C9A15B" stroke-width="2"/>
   </g>
-  <g transform="rotate(-2.2 1279.8 389.0)">
-    <rect x="1231.8" y="315" width="104" height="158" fill="#000" fill-opacity="0.55"/>
-    <rect x="1217.8" y="301" width="38" height="12" rx="2" fill="#8A5A2B"/>
-    <rect x="1227.8" y="310" width="104" height="158" fill="#D3C4A2" stroke="#8C7A58" stroke-width="1"/>
-    <line x1="1237.8" y1="384" x2="1321.8" y2="384" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <line x1="1237.8" y1="398" x2="1321.8" y2="398" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <line x1="1237.8" y1="412" x2="1321.8" y2="412" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <line x1="1237.8" y1="426" x2="1321.8" y2="426" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <line x1="1237.8" y1="440" x2="1321.8" y2="440" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <line x1="1237.8" y1="454" x2="1321.8" y2="454" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <text x="1237.8" y="332" font-family="'Courier New', Courier, monospace" font-size="9" letter-spacing="1" fill="#7A6748">FILE 10</text>
-    <text x="1279.8" y="362" font-family="'Courier New', Courier, monospace" font-weight="700" font-size="11.5" fill="#24160D" text-anchor="middle">SLOP-RADAR</text>
-    <rect x="1237.8" y="370" width="84" height="1.4" fill="#8A5A2B" fill-opacity="0.8"/>
-    <path d="M1305.8 328 V302 a6 6 0 0 1 12 0 V322 a3.5 3.5 0 0 1 -7 0 V306" fill="none" stroke="#C9A15B" stroke-width="2"/>
+  <g transform="rotate(-2.2 1180.5 389.0)">
+    <rect x="1132.5" y="315" width="104" height="158" fill="#000" fill-opacity="0.55"/>
+    <rect x="1118.5" y="301" width="38" height="12" rx="2" fill="#8A5A2B"/>
+    <rect x="1128.5" y="310" width="104" height="158" fill="#D3C4A2" stroke="#8C7A58" stroke-width="1"/>
+    <line x1="1138.5" y1="384" x2="1222.5" y2="384" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="1138.5" y1="398" x2="1222.5" y2="398" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="1138.5" y1="412" x2="1222.5" y2="412" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="1138.5" y1="426" x2="1222.5" y2="426" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="1138.5" y1="440" x2="1222.5" y2="440" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="1138.5" y1="454" x2="1222.5" y2="454" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <text x="1138.5" y="332" font-family="'Courier New', Courier, monospace" font-size="9" letter-spacing="1" fill="#7A6748">FILE 10</text>
+    <text x="1180.5" y="362" font-family="'Courier New', Courier, monospace" font-weight="700" font-size="11.5" fill="#24160D" text-anchor="middle">SLOP-RADAR</text>
+    <rect x="1138.5" y="370" width="84" height="1.4" fill="#8A5A2B" fill-opacity="0.8"/>
+    <path d="M1206.5 328 V302 a6 6 0 0 1 12 0 V322 a3.5 3.5 0 0 1 -7 0 V306" fill="none" stroke="#C9A15B" stroke-width="2"/>
   </g>
-  <g transform="rotate(1.6 1405.3 389.0)">
-    <rect x="1357.3" y="315" width="104" height="158" fill="#000" fill-opacity="0.55"/>
-    <rect x="1343.3" y="301" width="38" height="12" rx="2" fill="#8A5A2B"/>
-    <rect x="1353.3" y="310" width="104" height="158" fill="#D3C4A2" stroke="#8C7A58" stroke-width="1"/>
-    <line x1="1363.3" y1="384" x2="1447.3" y2="384" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <line x1="1363.3" y1="398" x2="1447.3" y2="398" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <line x1="1363.3" y1="412" x2="1447.3" y2="412" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <line x1="1363.3" y1="426" x2="1447.3" y2="426" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <line x1="1363.3" y1="440" x2="1447.3" y2="440" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <line x1="1363.3" y1="454" x2="1447.3" y2="454" stroke="#8C7A58" stroke-opacity="0.45"/>
-    <text x="1363.3" y="332" font-family="'Courier New', Courier, monospace" font-size="9" letter-spacing="1" fill="#7A6748">FILE 11</text>
-    <text x="1405.3" y="362" font-family="'Courier New', Courier, monospace" font-weight="700" font-size="11.5" fill="#24160D" text-anchor="middle">PRUNE-DOCS</text>
-    <rect x="1363.3" y="370" width="84" height="1.4" fill="#8A5A2B" fill-opacity="0.8"/>
-    <path d="M1431.3 328 V302 a6 6 0 0 1 12 0 V322 a3.5 3.5 0 0 1 -7 0 V306" fill="none" stroke="#C9A15B" stroke-width="2"/>
+  <g transform="rotate(1.6 1295.5 389.0)">
+    <rect x="1247.5" y="315" width="104" height="158" fill="#000" fill-opacity="0.55"/>
+    <rect x="1233.5" y="301" width="38" height="12" rx="2" fill="#8A5A2B"/>
+    <rect x="1243.5" y="310" width="104" height="158" fill="#D3C4A2" stroke="#8C7A58" stroke-width="1"/>
+    <line x1="1253.5" y1="384" x2="1337.5" y2="384" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="1253.5" y1="398" x2="1337.5" y2="398" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="1253.5" y1="412" x2="1337.5" y2="412" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="1253.5" y1="426" x2="1337.5" y2="426" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="1253.5" y1="440" x2="1337.5" y2="440" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="1253.5" y1="454" x2="1337.5" y2="454" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <text x="1253.5" y="332" font-family="'Courier New', Courier, monospace" font-size="9" letter-spacing="1" fill="#7A6748">FILE 11</text>
+    <text x="1295.5" y="362" font-family="'Courier New', Courier, monospace" font-weight="700" font-size="11.5" fill="#24160D" text-anchor="middle">PRUNE-DOCS</text>
+    <rect x="1253.5" y="370" width="84" height="1.4" fill="#8A5A2B" fill-opacity="0.8"/>
+    <path d="M1321.5 328 V302 a6 6 0 0 1 12 0 V322 a3.5 3.5 0 0 1 -7 0 V306" fill="none" stroke="#C9A15B" stroke-width="2"/>
+  </g>
+  <g transform="rotate(-0.8 1410.5 389.0)">
+    <rect x="1362.5" y="315" width="104" height="158" fill="#000" fill-opacity="0.55"/>
+    <rect x="1348.5" y="301" width="38" height="12" rx="2" fill="#8A5A2B"/>
+    <rect x="1358.5" y="310" width="104" height="158" fill="#D3C4A2" stroke="#8C7A58" stroke-width="1"/>
+    <line x1="1368.5" y1="384" x2="1452.5" y2="384" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="1368.5" y1="398" x2="1452.5" y2="398" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="1368.5" y1="412" x2="1452.5" y2="412" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="1368.5" y1="426" x2="1452.5" y2="426" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="1368.5" y1="440" x2="1452.5" y2="440" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <line x1="1368.5" y1="454" x2="1452.5" y2="454" stroke="#8C7A58" stroke-opacity="0.45"/>
+    <text x="1368.5" y="332" font-family="'Courier New', Courier, monospace" font-size="9" letter-spacing="1" fill="#7A6748">FILE 12</text>
+    <text x="1410.5" y="362" font-family="'Courier New', Courier, monospace" font-weight="700" font-size="11.5" fill="#24160D" text-anchor="middle">README-BANNER</text>
+    <rect x="1368.5" y="370" width="84" height="1.4" fill="#8A5A2B" fill-opacity="0.8"/>
+    <path d="M1436.5 328 V302 a6 6 0 0 1 12 0 V322 a3.5 3.5 0 0 1 -7 0 V306" fill="none" stroke="#C9A15B" stroke-width="2"/>
   </g>
 </svg>
