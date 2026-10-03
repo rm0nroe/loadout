@@ -1,0 +1,6 @@
+{
+  "forbid": [
+    {"pattern": "[\\u2014\\u2013]", "message": "em/en dash"},
+    {"pattern": "[\\U0001F300-\\U0001FAFF\\u2600-\\u27BF]", "message": "emoji", "channels": ["slack"]}
+  ]
+}

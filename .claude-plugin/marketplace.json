@@ -1,0 +1,14 @@
+{
+  "name": "rm0nroe",
+  "owner": { "name": "Ryan Monroe" },
+  "description": "Ryan Monroe's agent skills, as an installable Claude Code plugin.",
+  "plugins": [
+    {
+      "name": "rm0nroe-loadout",
+      "source": "./",
+      "description": "Agent skills for writing, explaining, saving sessions, and reviewing work.",
+      "category": "productivity",
+      "keywords": ["skills", "writing", "communication", "sessions", "review"]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "skill_name": "break-it-down",
+  "evals": [
+    {
+      "id": 1,
+      "name": "bare",
+      "prompt": "Runtime: Codex.\nPrevious assistant: 1. The API validates the access token before reading account data.\n2. The worker retries failed deliveries three times.\nUser: $break-it-down",
+      "expected_output": "Explain item 1 only, include $break-it-down 2 follow-up, no analogy; describe the distinction without alleging an error absent from the source.",
+      "files": [],
+      "assertions": [
+        "Explain item 1 only, include $break-it-down 2 follow-up, no analogy; describe the distinction without alleging an error absent from the source."
+      ]
+    },
+    {
+      "id": 2,
+      "name": "pointer",
+      "prompt": "Runtime: Claude Code.\nPrevious assistant: 1. The API validates the access token before reading account data.\n2. The worker retries failed deliveries three times.\nUser: /break-it-down 2",
+      "expected_output": "Explain item 2 only; preserve three retries after original attempt, no invented timing.",
+      "files": [],
+      "assertions": [
+        "Explain item 2 only; preserve three retries after original attempt, no invented timing."
+      ]
+    },
+    {
+      "id": 3,
+      "name": "absent",
+      "prompt": "Runtime: Codex.\nPrevious assistant: [none]\nUser: $break-it-down",
+      "expected_output": "One line acknowledging no previous assistant reply; stop.",
+      "files": [],
+      "assertions": [
+        "One line acknowledging no previous assistant reply; stop."
+      ]
+    },
+    {
+      "id": 4,
+      "name": "uncertainty",
+      "prompt": "Runtime: Codex.\nPrevious assistant: Cache entries may remain stale for up to 30 seconds. This does not guarantee that requests finish within 30 seconds.\nUser: $break-it-down",
+      "expected_output": "Preserve may and the 30-second bound on duration of staleness, not age of cached data; distinguish it from request duration in opening, numbered facts, and final rule.",
+      "files": [],
+      "assertions": [
+        "Preserve may and the 30-second bound on duration of staleness, not age of cached data; distinguish it from request duration in opening, numbered facts, and final rule."
+      ]
+    },
+    {
+      "id": 5,
+      "name": "real_names",
+      "prompt": "Runtime: Claude Code.\nPrevious assistant: PaymentsController returns 500 for AlreadyCaptured. BadPaymentRequest is an internal error name and does not establish the HTTP response status.\nUser: /break-it-down",
+      "expected_output": "Preserve real identifiers and 500; distinguish names from actual status; no metaphor.",
+      "files": [],
+      "assertions": [
+        "Preserve real identifiers and 500; distinguish names from actual status; no metaphor."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "rm0nroe-loadout",
+  "version": "1.0.0",
+  "description": "Agent skills for writing, explaining, saving sessions, and reviewing work. Small, curated, and tested in daily use.",
+  "author": { "name": "Ryan Monroe" },
+  "repository": "https://github.com/rm0nroe/loadout",
+  "license": "MIT",
+  "keywords": ["skills", "writing", "communication", "sessions", "review"],
+  "skills": [
+    "./skills/communication/ink-it",
+    "./skills/communication/intel-brief",
+    "./skills/communication/break-it-down",
+    "./skills/communication/paint-it",
+    "./skills/communication/load-clip",
+    "./skills/productivity/typewrite",
+    "./skills/productivity/pull-file",
+    "./skills/productivity/file-cabinet",
+    "./skills/engineering/roundtable",
+    "./skills/engineering/slop-radar",
+    "./skills/engineering/prune-docs"
+  ]
+}

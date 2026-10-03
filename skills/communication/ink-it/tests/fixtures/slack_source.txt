@@ -1,0 +1,8 @@
+Dana: checkout-api deploy is blocked on `retry_budget`. Logs: https://ci.example.com/runs/88123?tab=logs
+Dana said "Hold until the canary is green".
+Rollback if needed:
+```sh
+kubectl rollout undo deploy/checkout-api
+kubectl rollout status deploy/checkout-api
+```
+Owner ACME-311, fix in PR #77.

@@ -1,0 +1,3 @@
+Branch: fix/acme-412-retry-budget
+Ticket ACME-412: retries on checkout-api are unbounded; cap at 3 and log `RetryBudgetExceeded`.
+Files: services/checkout/retry.py, services/checkout/metrics.py
