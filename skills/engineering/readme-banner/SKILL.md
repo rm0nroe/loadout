@@ -17,7 +17,7 @@ Read the README, repo description, and main entry points. Note what the project 
 
 ### 2. Concept from the name, not the feature list (the step that matters)
 
-Ask what the project's name literally means or evokes, then draw that. loadout is a kit you pack, and every skill in it is named after a Resident Evil item, so its banner became a survival-horror attaché case: LOADOUT stenciled in blood on a stitched leather lid, and each skill a typed case file inside. The product idea lives inside the metaphor instead of being listed beside it.
+Ask what the project's name literally means or evokes, then draw that. loadout is a kit you pack, and its skill names are inspired by Resident Evil, so its banner became a survival-horror attaché case: LOADOUT stenciled in blood on a stitched leather lid, and each skill a typed case file inside. The product idea lives inside the metaphor instead of being listed beside it.
 
 Write three distinct concepts in one line each and pick the strongest. Reject any concept that comes down to "dark card + monospace + feature chips" or "gradient + logo + tagline". Those are the defaults every repo already has. If a concept could swap in another project's name without changing anything, it is not a concept yet.
 
