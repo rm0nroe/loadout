@@ -5,7 +5,7 @@ description: Design a memorable hero banner for a repository README as one self-
 
 # README Banner
 
-Produces `assets/banner.svg` (plus the font's license file) and wires it into the top of `README.md`. The worked example is this repository's own banner, `assets/example-loadout.svg`.
+Produces `assets/banner.svg` (plus the font's license file) and wires it into the top of `README.md`.
 
 First drafts of README banners tend to land on the same thing: a dark card with monospace text and feature chips. It says "developer tool" and nobody remembers it. The banners that work turn the project's *name* into a picture. Most of this skill is about getting there on the first try.
 
@@ -17,7 +17,7 @@ Read the README, repo description, and main entry points. Note what the project 
 
 ### 2. Concept from the project's identity, not its feature list (the step that matters)
 
-Ask what the project's name means or evokes, what it does, or what world its names come from, then draw that. loadout is a kit you pack, and its skill names are inspired by Resident Evil, so its banner became a survival-horror attaché case: LOADOUT stenciled in blood on a stitched leather lid, and each skill a typed case file inside. The product idea lives inside the metaphor instead of being listed beside it.
+Ask what the project's name means or evokes, what it does, or what world its names come from, then draw that. The product idea should live inside the picture instead of being listed beside it.
 
 Write three distinct concepts in one line each and pick the strongest. Reject any concept that comes down to "dark card + monospace + feature chips" or "gradient + logo + tagline". Those are the defaults every repo already has. If a concept could swap in another project's name without changing anything, it is not a concept yet.
 
@@ -26,7 +26,7 @@ If design or art-direction skills are installed, they can push the concept furth
 ### 3. Palette and type
 
 - **Background:** paint your own, never transparent, so one file reads on both GitHub themes; a transparent banner loses its dark text on dark mode or its light text on light mode. Dark is the easy default, and a light design works too if it sits on its own edged card. Swapping files per theme with `<picture>` is possible but doubles the maintenance.
-- **Colors:** a small palette derived from the concept rather than a stock gradient (loadout: `#090707` night, `#B3141B` blood, `#C9A15B` brass, leather browns `#3A2618` to `#24170F`).
+- **Colors:** three to five, derived from the concept rather than a stock gradient.
 - **Wordmark face:** any font whose license allows embedding it as outlines. SIL OFL 1.1 fonts are the simplest case, and Google Fonts hosts many; download the font file and its license together:
   ```bash
   curl -sSfLO https://raw.githubusercontent.com/google/fonts/main/ofl/<family>/<File>.ttf
@@ -38,8 +38,8 @@ If design or art-direction skills are installed, they can push the concept furth
 ### 4. Wordmark to outlines
 
 ```bash
-uv run <skill-dir>/scripts/wordmark.py SairaStencilOne-Regular.ttf "LOADOUT" \
-  --width 760 --x 92 --baseline 200 --fill "url(#blood)" --tracking 40
+uv run <skill-dir>/scripts/wordmark.py <Font>.ttf "<NAME>" \
+  --width 760 --x 92 --baseline 200 --fill "#EDE6DA"
 ```
 
 This prints one `<g transform="translate(..) scale(..)"><path/></g>` to paste in. Metrics go to stderr; use `top y` to place eyebrow lines above the mark. The scale is derived from `--width`, so changing fonts never needs hand-tuned numbers. `--tracking` adds letter spacing in font units, and `--fill` takes a color or a gradient reference.
@@ -50,7 +50,7 @@ If `uv` panics with `system-configuration ... NULL object` inside a sandbox, rer
 
 ### 5. Compose the SVG
 
-Use a wide canvas; `viewBox="0 0 1600 520"` (about 3:1) suits most READMEs. Start from `assets/example-loadout.svg` for structure. Guidelines, each with the reason it exists:
+Use a wide canvas; `viewBox="0 0 1600 520"` (about 3:1) suits most READMEs. Guidelines, each with the reason it exists:
 
 - `role="img"`, an `aria-label`, `<title>`, and a `<desc>` that states the concept, for screen readers.
 - A comment naming the font and its license file, so the license travels with the art.
@@ -75,7 +75,7 @@ Read both PNGs. Judge honestly:
 
 Fix and re-render until the answers are yes. rsvg is stricter than browsers, so passing here is a good proxy for GitHub.
 
-**Theme from the project's own culture.** If the project's names come from somewhere, ask whether the banner should carry it. If it should, commit to it: faint nods often don't read, while the source's palette and a few recognizable motifs do (loadout uses a biohazard trefoil, a heart monitor reading FINE, typed case files). Avoid logos, title text and copied art, which belong to their owners.
+**Theme from the project's own culture.** If the project's names come from somewhere, ask whether the banner should carry it. If it should, commit to it: faint nods often don't read, while the source's palette and a few recognizable motifs do. Avoid logos, title text and copied art, which belong to their owners.
 
 **When the user is unsure, show variants side by side.** Put them on one comparison page (each SVG as a base64 `<img>` so ids can't collide) with the current favorite on top for reference. Make the variants genuinely different: different concept, typeface and palette, as if from different designers. Save each favorite outside the repo before the next round, and delete them once the chosen banner is committed: the commit is the record.
 
