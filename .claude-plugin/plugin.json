@@ -1,6 +1,6 @@
 {
   "name": "rm0nroe-loadout",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Agent skills for writing, explaining, saving sessions, and reviewing work. Small, curated, and tested in daily use.",
   "author": { "name": "Ryan Monroe" },
   "repository": "https://github.com/rm0nroe/loadout",
