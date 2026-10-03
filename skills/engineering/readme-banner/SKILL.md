@@ -1,6 +1,6 @@
 ---
 name: readme-banner
-description: Design a memorable hero banner for a repository README as one self-contained SVG, with the wordmark converted to font outlines so it renders identically on GitHub, in dark and light themes, on every machine. Use whenever the user wants a README banner, header image, hero, or logo strip for a repo, is preparing to open-source or publish a repository, says "make the readme pop", "add a banner to the readme", or complains an existing README banner looks generic. Prefer this over general image or social-banner skills for anything that lives at the top of a README.
+description: Design a memorable hero banner for a repository README as one self-contained SVG, with the wordmark converted to font outlines so it renders identically on GitHub, in dark and light themes, on every machine. Use whenever the user wants a README banner, header image, hero, or logo strip for a repo, is preparing to open-source or publish a repository, says "add a banner to the readme", or complains an existing README banner looks generic. Prefer this over general image or social-banner skills for anything that lives at the top of a README.
 ---
 
 # README Banner
