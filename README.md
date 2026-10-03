@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/banner.svg" alt="loadout: agent skills for Claude Code and Codex" width="100%">
+</p>
+
 # loadout
 
 Agent skills I use every day, cleaned up for other people. Small on purpose: each one does one job and was kept because it kept earning its place.
