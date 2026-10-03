@@ -11,13 +11,13 @@ First drafts of README banners tend to land on the same thing: a dark card with 
 
 ## Workflow
 
-### 1. Collect real facts (5 min)
+### 1. Collect real facts
 
 Read the README, repo description, and main entry points. Note what the project literally does, its commands or surfaces, and any **real** numbers: counts from a run, file totals, supported platforms. Banner annotations use only these. A made-up "10x faster" erodes trust in an open-source repo, while a real measured number reads as confident.
 
-### 2. Concept from the name, not the feature list (the step that matters)
+### 2. Concept from the project's identity, not its feature list (the step that matters)
 
-Ask what the project's name literally means or evokes, then draw that. loadout is a kit you pack, and its skill names are inspired by Resident Evil, so its banner became a survival-horror attaché case: LOADOUT stenciled in blood on a stitched leather lid, and each skill a typed case file inside. The product idea lives inside the metaphor instead of being listed beside it.
+Ask what the project's name means or evokes, what it does, or what world its names come from, then draw that. loadout is a kit you pack, and its skill names are inspired by Resident Evil, so its banner became a survival-horror attaché case: LOADOUT stenciled in blood on a stitched leather lid, and each skill a typed case file inside. The product idea lives inside the metaphor instead of being listed beside it.
 
 Write three distinct concepts in one line each and pick the strongest. Reject any concept that comes down to "dark card + monospace + feature chips" or "gradient + logo + tagline". Those are the defaults every repo already has. If a concept could swap in another project's name without changing anything, it is not a concept yet.
 
@@ -25,14 +25,14 @@ If design or art-direction skills are installed, they can push the concept furth
 
 ### 3. Palette and type
 
-- **Background:** dark, so one file reads on both GitHub themes. Swapping files per theme with `<picture>` doubles the maintenance for little gain.
-- **Colors:** three to five, derived from the concept (loadout: `#090707` night, `#B3141B` blood, `#C9A15B` brass, leather browns `#3A2618` to `#24170F`). Don't default to purple gradients.
-- **Wordmark face:** a display font under SIL OFL 1.1 from `github.com/google/fonts/tree/main/ofl/`. Download the TTF and `OFL.txt` together:
+- **Background:** paint your own, never transparent, so one file reads on both GitHub themes; a transparent banner loses its dark text on dark mode or its light text on light mode. Dark is the easy default, and a light design works too if it sits on its own edged card. Swapping files per theme with `<picture>` is possible but doubles the maintenance.
+- **Colors:** a small palette derived from the concept rather than a stock gradient (loadout: `#090707` night, `#B3141B` blood, `#C9A15B` brass, leather browns `#3A2618` to `#24170F`).
+- **Wordmark face:** any font whose license allows embedding it as outlines. SIL OFL 1.1 fonts are the simplest case, and Google Fonts hosts many; download the font file and its license together:
   ```bash
-  curl -sSfLO https://raw.githubusercontent.com/google/fonts/main/ofl/<family>/<File>-Regular.ttf
+  curl -sSfLO https://raw.githubusercontent.com/google/fonts/main/ofl/<family>/<File>.ttf
   curl -sSfLO https://raw.githubusercontent.com/google/fonts/main/ofl/<family>/OFL.txt
   ```
-  Don't convert a system font like Impact or Helvetica. Outlining a short wordmark is common practice, but a public repo has no reason to leave the licensing question open.
+  Check the license before outlining a system or commercial font. Outlining a short wordmark is common practice, but a public repo is better off not leaving the question open.
 - **Secondary text** (eyebrow, tagline, labels) can stay as `<text>` with a system stack like `'Helvetica Neue', Helvetica, 'Segoe UI', sans-serif`. Small text falls back gracefully; a wordmark does not.
 
 ### 4. Wordmark to outlines
@@ -50,15 +50,16 @@ If `uv` panics with `system-configuration ... NULL object` inside a sandbox, rer
 
 ### 5. Compose the SVG
 
-Canvas `viewBox="0 0 1600 520"`. Start from `assets/example-loadout.svg` for structure. Requirements, each with the reason it exists:
+Use a wide canvas; `viewBox="0 0 1600 520"` (about 3:1) suits most READMEs. Start from `assets/example-loadout.svg` for structure. Guidelines, each with the reason it exists:
 
 - `role="img"`, an `aria-label`, `<title>`, and a `<desc>` that states the concept, for screen readers.
 - A comment naming the font and its license file, so the license travels with the art.
-- Only plain geometry: `rect`, `line`, `path`, `circle`, `pattern`, `clipPath`, `mask`, gradients. No `filter` (rendering varies across viewers), no `<image>`, raster, `<foreignObject>`, `@import`, or external `href`. GitHub's image proxy drops external resources.
+- No external references (`@import`, linked fonts, images or `href`s to other files or URLs): GitHub serves README SVGs as images and drops them. That one is a hard rule.
+- Prefer plain geometry (`rect`, `line`, `path`, `circle`, `pattern`, `clipPath`, `mask`, gradients). Filters and embedded raster images do render, but filters vary between renderers and raster bloats the file and its diffs, so check them on GitHub if you use them.
 - Reuse one wordmark path under two `clipPath`s for split or cut effects instead of drawing it twice.
-- Keep it diffable and small, ideally under 30 KB.
+- Keep it small and diffable.
 - Size every container from the text it holds (a card or capsule from its label, a plate from its longest row), never by eye. Fixed sizes are where overflows come from.
-- For repeated elements (one card or slot per item), generate the SVG with a throwaway script rather than writing it by hand. Don't commit the script.
+- For repeated elements (one card or slot per item), generate the SVG with a script rather than writing it by hand. Whether to commit the script is the repo's call; committing it makes later edits reproducible.
 
 ### 6. Render and actually look (iterate here)
 
@@ -74,22 +75,22 @@ Read both PNGs. Judge honestly:
 
 Fix and re-render until the answers are yes. rsvg is stricter than browsers, so passing here is a good proxy for GitHub.
 
-**Theme from the project's own culture.** If the project's names come from somewhere, ask whether the banner should carry it. Subtle nods don't register; use the source's palette and two or three iconic, non-trademarked motifs (loadout uses a biohazard trefoil, a heart monitor reading FINE, typed case files). Never use logos, title text or copied art.
+**Theme from the project's own culture.** If the project's names come from somewhere, ask whether the banner should carry it. If it should, commit to it: faint nods often don't read, while the source's palette and a few recognizable motifs do (loadout uses a biohazard trefoil, a heart monitor reading FINE, typed case files). Avoid logos, title text and copied art, which belong to their owners.
 
 **When the user is unsure, show variants side by side.** Put them on one comparison page (each SVG as a base64 `<img>` so ids can't collide) with the current favorite on top for reference. Make the variants genuinely different: different concept, typeface and palette, as if from different designers. Save each favorite outside the repo before the next round, and delete them once the chosen banner is committed: the commit is the record.
 
 ### 7. Wire it in
 
-Add this at the very top of `README.md`:
+Add it near the top of `README.md`, usually first:
 ```html
 <p align="center">
   <img src="assets/banner.svg" alt="<Name>: <one-line description>" width="100%">
 </p>
 ```
-Commit `assets/banner.svg`, `assets/<FONT>-OFL.txt`, and the README together, following the repo's own commit conventions. The commit body is a good place for the concept rationale, so the design can be recovered later. Don't commit the TTF or any build scripts, since the outlines are the artifact. Confirm with the user before committing or pushing.
+Commit `assets/banner.svg`, the font's license file, and the README together, following the repo's own commit conventions. The commit body is a good place for the concept rationale, so the design can be recovered later. The outlines are the artifact, so the font file itself isn't needed in the repo. Confirm with the user before committing or pushing.
 
 ## Done when
 
-- `assets/banner.svg` renders cleanly in rsvg at 1600 and 420 px.
-- Only real facts appear on it, and the wordmark has no `<text>`.
+- The banner renders cleanly in rsvg at full and phone width.
+- Only real facts appear on it, and the wordmark is outlines, not `<text>`.
 - The license file sits beside it, and the README shows it at the top.
