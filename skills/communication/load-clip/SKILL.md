@@ -19,7 +19,7 @@ The user usually runs `/load-clip slack` or `/load-clip jira` with no file. That
    | Target | Command | Why |
    |---|---|---|
    | Slack | `scripts/clip-slack.sh <file>` | Slack is Electron and ignores AppleScript clipboard classes. This writes an NSAttributedString plus `public.html` and `public.rtf`. |
-   | Jira, Notes, Docs | `scripts/clip.sh <file>` | AppleScript `«class HTML»` + `«class RTF »`. Jira pastes `[text](url)` as an inline link instead of a smart-link card. |
+   | Jira, Notes, Docs | `scripts/clip.sh <file>` | AppleScript `«class HTML»` + `«class RTF »` + `«class utf8»` plain text for terminals. Jira pastes `[text](url)` as an inline link instead of a smart-link card. |
 
 3. Confirm the script printed `clipboard: ... rich text from <file>`. Tell the user it is on the clipboard and which target it was built for. The clipboard is the deliverable; chat text is only a preview.
 4. Re-run after every edit the user asks for. The clipboard does not update itself.

@@ -71,4 +71,4 @@ for line in sys.stdin.read().splitlines():
 close_to(0)
 if fence is not None:  # unclosed fence: keep its content rather than drop it
     out.append("<pre><code>" + html.escape("\n".join(fence), quote=False) + "</code></pre>")
-print("<html><body>" + "\n".join(out) + "</body></html>")
+print("<html><head><meta charset=\"utf-8\"></head><body>" + "\n".join(out) + "</body></html>")

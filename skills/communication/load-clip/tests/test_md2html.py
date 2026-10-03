@@ -17,3 +17,12 @@ def test_quote_in_url_stays_inside_href():
     out = render('[x](https://a.com/"onclick="x)\n')
     assert 'href="https://a.com/&quot;onclick=&quot;x"' in out
     assert ' onclick=' not in out
+
+
+def test_non_ascii_survives_textutil(tmp_path):
+    # textutil reads undeclared HTML as Latin-1, so "café" pasted as "cafÃ©"
+    html = tmp_path / "s.html"
+    html.write_text(render("café “quoted”\n"), encoding="utf-8")
+    txt = tmp_path / "s.txt"
+    subprocess.run(["textutil", "-convert", "txt", "-format", "html", "-output", str(txt), str(html)], check=True)
+    assert "café “quoted”" in txt.read_text(encoding="utf-8")
