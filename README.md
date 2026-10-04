@@ -44,7 +44,7 @@ Installed as a plugin, skills are namespaced (`/rm0nroe-loadout:<skill>`). Copie
 ## Communication
 
 - **ink-it**: drafts Slack messages, emails, PR titles and bodies, review comments, commits, release notes, postmortems, tickets, articles and docs in your own voice. Keeps facts, code, identifiers and URLs byte-exact. Drafting only, never sends.
-- **intel-brief**: writes a message for someone who was not in the conversation, so you can paste or forward it.
+- **intel-brief**: writes a message for someone who was not in the conversation, so you can forward it as a handoff.
 - **break-it-down**: rewrites the last reply as a direct explanation. Blunt point, numbered facts, the mix-up named, one rule. No metaphors.
 - **paint-it**: the opposite of break-it-down. Rewrites the last reply as one everyday analogy with numbered roles.
 - **load-clip**: puts formatted text on the clipboard so bold, bullets and links survive a paste into Slack or Jira. macOS only.
