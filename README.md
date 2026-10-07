@@ -37,6 +37,7 @@ Installed as a plugin, skills are namespaced (`/rm0nroe-loadout:<skill>`). Copie
 
 - `ink-it`: Python 3.9+ (standard library only). Voice profiles are optional and live in `~/.config/ghostwriter/` (override with `$GHOSTWRITER_HOME`), never in this repo.
 - `load-clip`: macOS (`osascript`, `textutil`) and Python 3.
+- `exec-recap`: `git`, and the [GitHub CLI](https://cli.github.com/) (`gh`) for release lists and notes.
 - `prune-docs`: classifying docs needs nothing extra. Writing `.graphifyignore` and rebuilding or verifying the graph needs [graphify](https://pypi.org/project/graphifyy/) (`uv tool install graphifyy`).
 - `readme-banner`: [uv](https://docs.astral.sh/uv/) (runs the outline script and fetches `fonttools` itself) and `rsvg-convert` from librsvg (`brew install librsvg`) for render checks.
 - Everything else: nothing beyond Claude Code.
@@ -48,6 +49,7 @@ Installed as a plugin, skills are namespaced (`/rm0nroe-loadout:<skill>`). Copie
 - **break-it-down**: rewrites the last reply as a direct explanation. Blunt point, numbered facts, the mix-up named, one rule. No metaphors.
 - **paint-it**: the opposite of break-it-down. Rewrites the last reply as one everyday analogy with numbered roles.
 - **load-clip**: puts formatted text on the clipboard so bold, bullets and links survive a paste into Slack or Jira. macOS only.
+- **exec-recap**: turns a version range, a date range ("last two days") or a commit range into a one-screen, plain-language recap for executives who have never seen the project. Every line traces back to a release note, PR or commit.
 
 ## Sessions
 

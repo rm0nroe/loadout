@@ -12,6 +12,7 @@
     "./skills/communication/break-it-down",
     "./skills/communication/paint-it",
     "./skills/communication/load-clip",
+    "./skills/communication/exec-recap",
     "./skills/productivity/typewrite",
     "./skills/productivity/pull-file",
     "./skills/productivity/file-cabinet",
