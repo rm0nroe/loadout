@@ -18,6 +18,6 @@ Include the skill, what you ran, and what happened. Expect a first reply within 
 - `ink-it` reads voice profiles from `~/.config/ghostwriter/` (or `$GHOSTWRITER_HOME`). None ship with this repo.
 - `roundtable` starts background agents in your session, and `slop-radar` can open a URL you give it. Both work only on what you point them at.
 - `readme-banner` has `uv` download `fonttools` the first time its outline script runs, and can download an open-license font from Google Fonts. The script itself makes no network call.
-- `exec-recap` runs `git fetch` and read-only `gh` queries (releases, release notes, merged PRs) on the repo you point it at. It changes nothing in the repo.
+- `exec-recap` runs `git fetch` and read-only `gh` queries (releases, release notes, merged PRs) on the repo you point it at. Fetch updates local Git metadata, including remote-tracking refs and tags; it does not edit working files or push changes.
 
 Review any skill before you install it, the same as any code you run.
