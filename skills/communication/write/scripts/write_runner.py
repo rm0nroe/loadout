@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Deterministic runner for the /draft skill (Builds 1-3: Slack, PR title/body,
+"""Deterministic runner for the /write skill (Builds 1-3: Slack, PR title/body,
 PR comments, email, commit messages, release notes, postmortems, tickets,
 articles, docs).
 

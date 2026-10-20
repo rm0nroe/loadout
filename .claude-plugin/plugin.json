@@ -7,7 +7,7 @@
   "license": "MIT",
   "keywords": ["skills", "writing", "communication", "sessions", "review"],
   "skills": [
-    "./skills/communication/draft",
+    "./skills/communication/write",
     "./skills/communication/relay",
     "./skills/communication/break-it-down",
     "./skills/communication/simplify",

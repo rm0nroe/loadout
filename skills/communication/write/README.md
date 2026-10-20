@@ -1,4 +1,4 @@
-# draft skill
+# write skill
 
 Drafts Slack messages, emails and PR comments (Ghostwriter rules), PR titles and bodies (pr-creator rules), commit messages (repository conventions), and release notes, postmortems, tickets, articles and docs (Sepia rules) in the user's voice. It is drafting only and never sends, posts, commits, pushes, rebases or edits PRs.
 
@@ -28,9 +28,9 @@ python3 -m unittest discover -s tests -v
 
 ## Use without installing
 
-Claude Code, project-scoped (no global install): symlink or copy this skill directory to `<project>/.claude/skills/draft`, then run `claude --settings <skill directory>/config/claude-settings.json`.
+Claude Code, project-scoped (no global install): symlink or copy this skill directory to `<project>/.claude/skills/write`, then run `claude --settings <skill directory>/config/claude-settings.json`.
 
-Codex: point it at `SKILL.md` in the prompt, or copy the directory to `~/.codex/skills/draft` and invoke `$draft`. Codex attribution is account/workspace policy with no verified local switch; it only applies to commits and PRs Codex creates, which this skill never does.
+Codex: point it at `SKILL.md` in the prompt, or copy the directory to `~/.codex/skills/write` and invoke `$write`. Codex attribution is account/workspace policy with no verified local switch; it only applies to commits and PRs Codex creates, which this skill never does.
 
 ## Voice data
 

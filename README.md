@@ -28,33 +28,16 @@ Or copy a single skill folder into `~/.claude/skills/` for Claude Code or `~/.co
 Then, in any Claude Code session:
 
 ```
-/rm0nroe-loadout:draft a Slack message: the deploy slipped to Friday
+/rm0nroe-loadout:write a Slack message: the deploy slipped to Friday
 ```
 
 Installed as a plugin, skills are namespaced (`/rm0nroe-loadout:<skill>`). Copied into `~/.claude/skills/`, they run as `/<skill>`. Most also trigger on plain requests ("draft a PR description", "explain that simply").
 
-In Codex, invoke a copied skill as `$draft`, `$relay`, or `$checkpoint-load`. Start a fresh session after updating installed skills so the new names are discovered.
-
-## Renamed skills
-
-After updating, use these names. The old commands and skill paths have no compatibility aliases.
-
-For copied installations, remove the old Loadout folders listed below and install the matching new folders. Keep any separately installed Groundwork checkpoint skills. For Claude plugins, if updating still shows the old names, uninstall and reinstall `rm0nroe-loadout@rm0nroe`, then restart Claude Code.
-
-| Previous name | New name |
-|---|---|
-| `ink-it` | `draft` |
-| `intel-brief` | `relay` |
-| `load-clip` | `clip` |
-| `paint-it` | `simplify` |
-| `prune-docs` | `docs-prune` |
-| `pull-file` | `checkpoint-load` |
-| `typewrite` | `checkpoint-save` |
-| `file-cabinet` | `checkpoint-list` |
+In Codex, invoke a copied skill as `$write`, `$relay`, or `$checkpoint-load`. Start a fresh session after updating installed skills so the new names are discovered.
 
 ## Requirements
 
-- `draft`: Python 3.9+ (standard library only). Voice profiles are optional and live in `~/.config/ghostwriter/` (override with `$GHOSTWRITER_HOME`), never in this repo.
+- `write`: Python 3.9+ (standard library only). Voice profiles are optional and live in `~/.config/ghostwriter/` (override with `$GHOSTWRITER_HOME`), never in this repo.
 - `clip`: macOS (`osascript`, `textutil`) and Python 3.
 - `checkpoint-load`: sealed Send It checkpoints require Git, Python 3, and Groundwork's installed runtime; ordinary checkpoints need no extra tools.
 - `exec-recap`: `git`, and the [GitHub CLI](https://cli.github.com/) (`gh`) for release lists and notes.
@@ -64,7 +47,7 @@ For copied installations, remove the old Loadout folders listed below and instal
 
 ## Communication
 
-- **draft**: drafts Slack messages, emails, PR titles and bodies, review comments, commits, release notes, postmortems, tickets, articles and docs in your own voice. Keeps facts, code, identifiers and URLs byte-exact. Drafting only, never sends.
+- **write**: drafts Slack messages, emails, PR titles and bodies, review comments, commits, release notes, postmortems, tickets, articles and docs in your own voice. Keeps facts, code, identifiers and URLs byte-exact. Drafting only, never sends.
 - **relay**: writes a message for someone who was not in the conversation, so you can forward it as a handoff.
 - **break-it-down**: rewrites the last reply as a direct explanation. Blunt point, numbered facts, the mix-up named, one rule. No metaphors.
 - **simplify**: explains the last reply with one everyday analogy and numbered roles.
@@ -88,4 +71,4 @@ Save where you are, clear context, pick up later. Ordinary state files live in `
 
 ## License
 
-MIT. `draft` includes third-party material under MIT; see its `THIRD_PARTY_NOTICES.md`.
+MIT. `write` includes third-party material under MIT; see its `THIRD_PARTY_NOTICES.md`.

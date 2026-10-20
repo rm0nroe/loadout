@@ -1,4 +1,4 @@
-"""Build 1-3 correctness gates for the /draft runner. Every test drives the
+"""Build 1-3 correctness gates for the /write runner. Every test drives the
 real CLI (`python3 scripts/write_runner.py ...`) through subprocess.
 
 Run: python3 -m unittest discover -s tests -v
