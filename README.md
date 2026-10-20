@@ -10,9 +10,18 @@ Works in Claude Code and Codex, and in other runtimes that read `SKILL.md`. `cli
 
 ## Install
 
+Claude Code:
+
 ```bash
 claude plugin marketplace add rm0nroe/loadout
 claude plugin install rm0nroe-loadout@rm0nroe
+```
+
+Codex CLI with plugin support:
+
+```bash
+codex plugin marketplace add rm0nroe/loadout
+codex plugin add rm0nroe-loadout@rm0nroe
 ```
 
 Or install them as plain skill files for Claude Code, Codex and other agents with [skills.sh](https://skills.sh), picking the ones you want:
@@ -21,7 +30,7 @@ Or install them as plain skill files for Claude Code, Codex and other agents wit
 npx skills@latest add rm0nroe/loadout
 ```
 
-Plugins from this marketplace don't auto-update by default. Turn it on in `/plugin` (Marketplaces tab, select `rm0nroe`, Enable auto-update), or update by hand with `claude plugin update rm0nroe-loadout@rm0nroe`. Copied skill files are yours to edit, and `npx skills update` pulls new versions. Pick one way: installing both leaves you with every skill twice.
+In Claude Code, plugins from this marketplace don't auto-update by default. Turn it on in `/plugin` (Marketplaces tab, select `rm0nroe`, Enable auto-update), or update by hand with `claude plugin update rm0nroe-loadout@rm0nroe`. In Codex, refresh the marketplace with `codex plugin marketplace upgrade rm0nroe`, then run `codex plugin add rm0nroe-loadout@rm0nroe` again. Copied skill files are yours to edit, and `npx skills update` pulls new versions. Pick one way per runtime: installing both leaves you with every skill twice.
 
 Or copy a single skill folder into `~/.claude/skills/` for Claude Code or `~/.codex/skills/` for Codex.
 
@@ -31,7 +40,7 @@ Then, in any Claude Code session:
 /rm0nroe-loadout:write a Slack message: the deploy slipped to Friday
 ```
 
-Installed as a plugin, skills are namespaced (`/rm0nroe-loadout:<skill>`). Copied into `~/.claude/skills/`, they run as `/<skill>`. Most also trigger on plain requests ("draft a PR description", "explain that simply").
+In Claude Code, skills installed as a plugin are namespaced (`/rm0nroe-loadout:<skill>`). Copied into `~/.claude/skills/`, they run as `/<skill>`. Most also trigger on plain requests ("draft a PR description", "explain that simply").
 
 In Codex, invoke a copied skill as `$write`, `$relay`, or `$checkpoint-load`. Start a fresh session after updating installed skills so the new names are discovered.
 
@@ -42,7 +51,7 @@ In Codex, invoke a copied skill as `$write`, `$relay`, or `$checkpoint-load`. St
 - `checkpoint-load`: sealed Send It checkpoints require Git, Python 3, and Groundwork's installed runtime; ordinary checkpoints need no extra tools.
 - `exec-recap`: `git`, and the [GitHub CLI](https://cli.github.com/) (`gh`) for release lists and notes.
 - `docs-prune`: classifying docs needs nothing extra. Writing `.graphifyignore` and rebuilding or verifying the graph needs [graphify](https://pypi.org/project/graphifyy/) (`uv tool install graphifyy`).
-- `readme-banner`: [uv](https://docs.astral.sh/uv/) (runs the outline script and fetches `fonttools` itself) and `rsvg-convert` from librsvg (`brew install librsvg`) for render checks.
+- `readme-banner`: [uv](https://docs.astral.sh/uv/) (runs the outline script with Python 3.10+ and fetches `fonttools` itself) and `rsvg-convert` from librsvg (`brew install librsvg`) for render checks.
 - Everything else: a runtime that reads `SKILL.md`.
 
 ## Communication
@@ -71,4 +80,4 @@ Save where you are, clear context, pick up later. Ordinary state files live in `
 
 ## License
 
-MIT. `write` includes third-party material under MIT; see its `THIRD_PARTY_NOTICES.md`.
+MIT. `write` includes third-party material under MIT; see its [third-party notices](skills/communication/write/THIRD_PARTY_NOTICES.md). The banner uses Saira Stencil One outlines; its [SIL Open Font License](assets/SAIRA-STENCIL-OFL.txt) is included beside the SVG.

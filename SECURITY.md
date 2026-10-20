@@ -13,11 +13,12 @@ Include the skill, what you ran, and what happened. Expect a first reply within 
 
 ## What the skills do and don't do
 
-- No script makes a network call. `write_runner.py` uses only the Python standard library and starts no other process. The `clip` scripts call the macOS tools `textutil` and `osascript` and write only to a temporary directory.
+- No script makes a network call. `write_runner.py` uses only the Python standard library and starts no other process; `snapshot` and successful `finalize` calls write to the requested output path. The `clip` scripts call the macOS tools `textutil` and `osascript`, write intermediate files to a temporary directory, and replace the system clipboard.
 - Skills run with your agent's permissions. Text you give a skill goes to your model provider like any other prompt.
 - `write` reads voice profiles from `~/.config/ghostwriter/` (or `$GHOSTWRITER_HOME`). None ship with this repo.
 - `roundtable` starts background agents in your session, and `slop-radar` can open a URL you give it. Both work only on what you point them at.
 - `readme-banner` has `uv` download `fonttools` the first time its outline script runs, and can download an open-license font from Google Fonts. The script itself makes no network call.
 - `exec-recap` runs `git fetch` and read-only `gh` queries (releases, release notes, merged PRs) on the repo you point it at. Fetch updates local Git metadata, including remote-tracking refs and tags; it does not edit working files or push changes.
+- `checkpoint-save` writes ordinary session notes to `~/.claude_states/<project>/`. For `sendit-<run-uuid>` checkpoints, `checkpoint-load` invokes Groundwork's installed runtime to validate the sealed state in the current worktree's Git directory. Failed validation blocks loading; reading or saving notes does not authorize restarting a controller-owned worker.
 
 Review any skill before you install it, the same as any code you run.
