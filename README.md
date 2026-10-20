@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner.svg" alt="Loadout: a practical kit for drafting, explaining, and saving your place in Claude Code and Codex" width="100%">
+  <img src="assets/banner.svg" alt="Loadout: three field kits of agent skills for Claude Code and Codex, built for the task" width="100%">
 </p>
 
 # loadout
