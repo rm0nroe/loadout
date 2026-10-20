@@ -7,18 +7,18 @@
   "license": "MIT",
   "keywords": ["skills", "writing", "communication", "sessions", "review"],
   "skills": [
-    "./skills/communication/ink-it",
-    "./skills/communication/intel-brief",
+    "./skills/communication/draft",
+    "./skills/communication/relay",
     "./skills/communication/break-it-down",
-    "./skills/communication/paint-it",
-    "./skills/communication/load-clip",
+    "./skills/communication/simplify",
+    "./skills/communication/clip",
     "./skills/communication/exec-recap",
-    "./skills/productivity/typewrite",
-    "./skills/productivity/pull-file",
-    "./skills/productivity/file-cabinet",
+    "./skills/productivity/checkpoint-save",
+    "./skills/productivity/checkpoint-load",
+    "./skills/productivity/checkpoint-list",
     "./skills/engineering/roundtable",
     "./skills/engineering/slop-radar",
-    "./skills/engineering/prune-docs",
+    "./skills/engineering/docs-prune",
     "./skills/engineering/readme-banner"
   ]
 }

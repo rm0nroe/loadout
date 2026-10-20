@@ -1,6 +1,6 @@
 ---
-name: file-cabinet
-description: "Lists all saved checkpoints for the current project. Usage: /file-cabinet"
+name: checkpoint-list
+description: "Lists all saved checkpoints for the current project. Usage: /checkpoint-list"
 ---
 
 # List Saved Sessions

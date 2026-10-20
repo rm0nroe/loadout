@@ -28,7 +28,7 @@ Do **not** ask them to name the confusing part, paste the prior message, or type
 Source, in order:
 
 1. The immediately previous **assistant** message (the thing that confused them).
-   If that message is itself a `/break-it-down` or `/paint-it` reply, use the message it explained instead: `/break-it-down 2` after one of those means item 2 of the original list.
+   If that message is itself a `/break-it-down` or `/simplify` reply, use the message it explained instead: `/break-it-down 2` after one of those means item 2 of the original list.
 2. If they added a few words after the slash (`/break-it-down 2` or `/break-it-down the status code part`), use that only as a pointer into that message.
 3. If the previous assistant message was a numbered list and they gave no pointer, unpack **item 1** only.
 
@@ -50,7 +50,7 @@ One idea per reply. If the last message had several numbered items and they did 
 
 - A time limit bounds one specific span; restate that span, never a nearby one. "Stale for up to 30 seconds" bounds how long a cached entry can lag behind a change to the source after that change happens. It does not bound how old the entry is: an entry cached an hour ago is not stale if the source has not changed since. Write "after the source changes, the cache can keep serving the old value for up to 30 seconds," not "cached data is at most 30 seconds old." The same goes for timeouts versus durations and retry delays versus total wait.
 
-- The two rules above are shared with `paint-it`. Keep them in sync when either file changes.
+- The two rules above are shared with `simplify`. Keep them in sync when either file changes.
 
 - Assume they are smart and busy, not new to life. Do not baby-talk. Do not lecture CS.
 - **No metaphors, analogies, or “imagine a…”**: not even a short one on line 1.

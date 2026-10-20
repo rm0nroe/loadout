@@ -1,6 +1,6 @@
 ---
-name: load-clip
-description: "macOS only. Use whenever the user asks to copy, clip, or put ANY text on their clipboard for pasting into Slack, Jira, Notes, or Docs, however short or simple the text. pbcopy is never sufficient here: it pastes literal *asterisks*, backticks, and dashes into Slack, which is the failure this skill exists to prevent. Also use when the user says a paste lost its bold or bullets, or asks for 'the shell script for this'. Usage: /load-clip [slack|jira] for the last finalized draft in chat, or /load-clip <markdown file> [slack|jira]"
+name: clip
+description: "macOS only. Use whenever the user asks to copy, clip, or put ANY text on their clipboard for pasting into Slack, Jira, Notes, or Docs, however short or simple the text. pbcopy is never sufficient here: it pastes literal *asterisks*, backticks, and dashes into Slack, which is the failure this skill exists to prevent. Also use when the user says a paste lost its bold or bullets, or asks for 'the shell script for this'. Usage: /clip [slack|jira] for the last finalized draft in chat, or /clip <markdown file> [slack|jira]"
 ---
 
 # Rich-Text Clipboard Copy
@@ -9,7 +9,7 @@ Put a markdown draft on the macOS clipboard as rich text so the paste target ren
 
 ## Typical call
 
-The user usually runs `/load-clip slack` or `/load-clip jira` with no file. That means: take the last finalized draft in the chat (the status update, the comment, the answer the user just approved), write it to a scratchpad `.md`, and clip it for that target. When it is ambiguous which chat text the user means, pick the most recent finalized draft and name it in the confirmation. If the user passes a file, use that file.
+The user usually runs `/clip slack` or `/clip jira` with no file. That means: take the last finalized draft in the chat (the status update, the comment, the answer the user just approved), write it to a scratchpad `.md`, and clip it for that target. When it is ambiguous which chat text the user means, pick the most recent finalized draft and name it in the confirmation. If the user passes a file, use that file.
 
 ## Steps
 

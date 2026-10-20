@@ -1,5 +1,5 @@
 ---
-name: ink-it
+name: draft
 description: Drafts Slack messages, emails, GitHub PR titles and descriptions, PR review comments and replies, and git commit messages, release notes, incident postmortems, tickets, technical articles and documentation pages in the user's own voice, with facts, quotes, code, identifiers and URLs kept byte-exact and all AI attribution stripped. Use whenever the user asks to write, draft, rewrite or tighten a Slack message, DM, thread reply, standup post, email or email reply, PR title, PR description or body, PR or review comment, commit message, release notes or changelog, postmortem, ticket, article or blog post, or docs page, even if they only say "write this up for slack", "describe this PR" or "message for this diff". Drafting only; it never sends, posts, commits, pushes or opens PRs.
 ---
 

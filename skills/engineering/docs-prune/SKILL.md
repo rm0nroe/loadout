@@ -1,5 +1,5 @@
 ---
-name: prune-docs
+name: docs-prune
 description: Analyze a repo's documentation corpus and prune/exclude stale docs so knowledge-graph and vault tooling (graphify, Obsidian sync) index only live, high-signal content. Use whenever the user wants to "prune docs", "clean up documentation", "make the repo less doc heavy", "reduce graph noise", prepare a repo for a graphify build or Obsidian vault sync, or asks whether old plans/archives/research files are safe to remove. Also use before any first graphify semantic pass on a doc-heavy repo, or when graph queries return stale/dead documents next to live ones.
 ---
 

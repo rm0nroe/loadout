@@ -1,12 +1,12 @@
 ---
-name: paint-it
+name: simplify
 description: >
   Rewrites the last assistant reply into a short everyday analog (one
   metaphor, numbered roles, mix-up named, one-sentence rule). Use when the
-  user types /paint-it with no extra text, or says something is
+  user types /simplify with no extra text, or says something is
   unclear, too technical, jargon, "I don't get it", "make it simpler",
   "like last time", "non-technical", "tldr but human", or ELI5. Bare
-  /paint-it means: explain that previous message; do not ask them
+  /simplify means: explain that previous message; do not ask them
   to paste or restate the confusing part.
 ---
 
@@ -18,22 +18,22 @@ This skill wins over any terse-output mode for the explanation itself. Chat arou
 
 ## Invocation (this is the product)
 
-In follow-up suggestions, use the form the user typed, including any plugin prefix (`/rm0nroe-loadout:paint-it 2`).
+In follow-up suggestions, use the form the user typed, including any plugin prefix (`/rm0nroe-loadout:simplify 2`).
 
-**`/paint-it` with nothing after it is the full request.** It already means: “I don’t get the last thing you said. Make it clear for someone non-technical.”
+**`/simplify` with nothing after it is the full request.** It already means: “I don’t get the last thing you said. Make it clear for someone non-technical.”
 
 Do **not** ask them to name the confusing part, paste the prior message, or type “item 1.” That text is already in this chat.
 
 Source, in order:
 
 1. The immediately previous **assistant** message (the thing that confused them).
-   If that message is itself a `/break-it-down` or `/paint-it` reply, use the message it explained instead: `/paint-it 2` after one of those means item 2 of the original list.
-2. If they added a few words after the slash (`/paint-it 2` or `/paint-it the cashier part`), use that only as a pointer into that message.
+   If that message is itself a `/break-it-down` or `/simplify` reply, use the message it explained instead: `/simplify 2` after one of those means item 2 of the original list.
+2. If they added a few words after the slash (`/simplify 2` or `/simplify the cashier part`), use that only as a pointer into that message.
 3. If the previous assistant message was a numbered list and they gave no pointer, explain **item 1** only.
 
 If there is no prior assistant message in this chat, say so in one line and stop.
 
-One idea per reply. If the last message had several numbered items and they did not pick one, do item 1, then one line: “Say `/paint-it 2` for the next.”
+One idea per reply. If the last message had several numbered items and they did not pick one, do item 1, then one line: “Say `/simplify 2` for the next.”
 
 ## Shape (always)
 
@@ -56,7 +56,7 @@ One idea per reply. If the last message had several numbered items and they did 
 
 ## Gold example (quality bar: match this density, not this restaurant every time)
 
-They typed only `/paint-it` after a numbered technical list. Treat that as: “I don’t get what you mean in 1, make it more clear for someone non-technical.”
+They typed only `/simplify` after a numbered technical list. Treat that as: “I don’t get what you mean in 1, make it more clear for someone non-technical.”
 
 ```
 The map is not the street. The code index is a map of the code. The status code a client actually gets is written in a different file than the name that looks like “bad request.”

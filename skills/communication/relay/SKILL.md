@@ -1,9 +1,9 @@
 ---
-name: intel-brief
+name: relay
 description: Write a message addressed to a specific person or team who was NOT part of this conversation, which the user will hand off, paste, forward, or read aloud to them. Use this whenever the user says "draft a message to...", "write this up for my teammate", "write it addressed to them", "I'll relay this", "I'll pass this along", "send this to the author", "write feedback for whoever built this", "put this in a message for the team", or asks for a note, brief, handoff, or write-up that someone else will read. Also use it proactively when the user has just received findings, a review, a decision, a status, or a diagnosis and the obvious next step is telling someone else about it. The distinguishing signal is a named third-party reader plus an intermediary carrying the message, not that the content is technical.
 ---
 
-# Briefing Someone Who Wasn't There
+# Relay a Message
 
 ## The core constraint
 
