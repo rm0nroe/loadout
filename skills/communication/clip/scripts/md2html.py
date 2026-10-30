@@ -13,7 +13,8 @@ def inline(s):
     s = re.sub(r"`[^`]+`", "\0", s)
     s = re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", s)
     # [text](url) -> anchor with custom text, so Jira pastes an inline link instead of a smart-link card.
-    s = re.sub(r"\[([^\]]+)\]\((https?://[^)\s]+)\)", r'<a href="\2">\1</a>', s)
+    # URL may hold one balanced paren pair, e.g. wikipedia's Foo_(bar)
+    s = re.sub(r"\[([^\]]+)\]\((https?://(?:[^()\s]|\([^()\s]*\))+)\)", r'<a href="\2">\1</a>', s)
     for c in codes:
         s = s.replace("\0", f"<code>{c}</code>", 1)
     # Slack's RTF importer drops the font/bold reset when a run is empty, so a line
