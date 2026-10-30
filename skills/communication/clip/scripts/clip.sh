@@ -7,6 +7,7 @@ set -e
 [ -f "$1" ] || { echo "usage: clip.sh <markdown file>" >&2; exit 2; }
 HERE="$(cd "$(dirname "$0")" && pwd)"
 T="$(mktemp -d /tmp/clip.XXXXXX)"
+trap 'rm -rf "$T"' EXIT
 python3 "$HERE/md2html.py" < "$1" > "$T/s.html"
 textutil -convert rtf -format html -output "$T/s.rtf" "$T/s.html"
 # plain text for terminals and chat inputs; without it pbpaste returns raw RTF source
@@ -19,5 +20,4 @@ on run argv
   set the clipboard to {«class HTML»:h, «class RTF »:r, «class utf8»:t}
 end run
 AS
-rm -rf "$T"
 echo "clipboard: jira/notes rich text from $1"
