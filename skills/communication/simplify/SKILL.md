@@ -18,7 +18,7 @@ This skill wins over any terse-output mode for the explanation itself. Chat arou
 
 ## Invocation (this is the product)
 
-In follow-up suggestions, use the form the user typed, including any plugin prefix (`/rm0nroe-loadout:simplify 2`).
+In follow-up suggestions, use the form the user typed, including any plugin prefix (`/loadout:simplify 2`).
 
 **`/simplify` with nothing after it is the full request.** It already means: “I don’t get the last thing you said. Make it clear for someone non-technical.”
 

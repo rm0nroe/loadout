@@ -14,14 +14,14 @@ Claude Code:
 
 ```bash
 claude plugin marketplace add rm0nroe/loadout
-claude plugin install rm0nroe-loadout@rm0nroe
+claude plugin install loadout@rm0nroe
 ```
 
 Codex CLI with plugin support:
 
 ```bash
 codex plugin marketplace add rm0nroe/loadout
-codex plugin add rm0nroe-loadout@rm0nroe
+codex plugin add loadout@rm0nroe
 ```
 
 Or install them as plain skill files for Claude Code, Codex and other agents with [skills.sh](https://skills.sh), picking the ones you want:
@@ -30,17 +30,19 @@ Or install them as plain skill files for Claude Code, Codex and other agents wit
 npx skills@latest add rm0nroe/loadout
 ```
 
-In Claude Code, plugins from this marketplace don't auto-update by default. Turn it on in `/plugin` (Marketplaces tab, select `rm0nroe`, Enable auto-update), or update by hand with `claude plugin update rm0nroe-loadout@rm0nroe`. In Codex, refresh the marketplace with `codex plugin marketplace upgrade rm0nroe`, then run `codex plugin add rm0nroe-loadout@rm0nroe` again. Copied skill files are yours to edit, and `npx skills update` pulls new versions. Pick one way per runtime: installing both leaves you with every skill twice.
+In Claude Code, plugins from this marketplace don't auto-update by default. Turn it on in `/plugin` (Marketplaces tab, select `rm0nroe`, Enable auto-update), or update by hand with `claude plugin update loadout@rm0nroe`. In Codex, refresh the marketplace with `codex plugin marketplace upgrade rm0nroe`, then run `codex plugin add loadout@rm0nroe` again. Copied skill files are yours to edit, and `npx skills update` pulls new versions. Pick one way per runtime: installing both leaves you with every skill twice.
+
+Upgrading from 1.x? The plugin was renamed from `rm0nroe-loadout` to `loadout` in 2.0.0, so skills are now `/loadout:<skill>`. Remove the old one first: `claude plugin uninstall rm0nroe-loadout@rm0nroe` (Codex: `codex plugin remove rm0nroe-loadout@rm0nroe`), then install `loadout@rm0nroe` as above.
 
 Or copy a single skill folder into `~/.claude/skills/` for Claude Code or `~/.codex/skills/` for Codex.
 
 Then, in any Claude Code session:
 
 ```
-/rm0nroe-loadout:write a Slack message: the deploy slipped to Friday
+/loadout:write a Slack message: the deploy slipped to Friday
 ```
 
-In Claude Code, skills installed as a plugin are namespaced (`/rm0nroe-loadout:<skill>`). Copied into `~/.claude/skills/`, they run as `/<skill>`. Most also trigger on plain requests ("draft a PR description", "explain that simply").
+In Claude Code, skills installed as a plugin are namespaced (`/loadout:<skill>`). Copied into `~/.claude/skills/`, they run as `/<skill>`. Most also trigger on plain requests ("draft a PR description", "explain that simply").
 
 In Codex, invoke a copied skill as `$write`, `$relay`, or `$checkpoint-load`. Start a fresh session after updating installed skills so the new names are discovered.
 

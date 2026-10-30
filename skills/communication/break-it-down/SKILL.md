@@ -19,7 +19,7 @@ Use the conversation and the instructions here; no other skill or plugin is requ
 
 ## Invocation
 
-In Codex, invoke with `$break-it-down`; in Claude Code, invoke with `/break-it-down`. Treat both spellings identically in the rules below. In follow-up suggestions, use the form the user typed, including any plugin prefix (`/rm0nroe-loadout:break-it-down 2`).
+In Codex, invoke with `$break-it-down`; in Claude Code, invoke with `/break-it-down`. Treat both spellings identically in the rules below. In follow-up suggestions, use the form the user typed, including any plugin prefix (`/loadout:break-it-down 2`).
 
 **`/break-it-down` with nothing after it is the full request.** It already means: “I don’t get the last thing you said. Say it straight.”
 
