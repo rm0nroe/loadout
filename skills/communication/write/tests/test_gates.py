@@ -10,6 +10,7 @@ import stat
 import subprocess
 import sys
 import tempfile
+import time
 import unittest
 from pathlib import Path
 
@@ -216,6 +217,15 @@ class Gate3ProtectedSpans(CLI):
 
     def slack_draft(self, **swap):
         return slack_draft(**swap)
+
+    def test_snapshot_large_context_is_fast(self):
+        lines = [f"+    value_{i} = compute_thing_{i}(arg_{i})  # see services/x/f{i}.py" for i in range(12000)]
+        ctx = self.put("ctx.txt", "\n".join(lines) + "\n")
+        t0 = time.monotonic()
+        code, _ = self.run_cli("snapshot", "--source", FIX / "slack_source.txt", "--context", ctx,
+                               "--out", self.tmp / "sp.json")
+        self.assertEqual(code, 0)
+        self.assertLess(time.monotonic() - t0, 3)
 
     def test_changed_spans_restored_byte_exact(self):
         draft = self.slack_draft(url="https://ci.example.com/runs/88123?tab=Logs",
@@ -503,7 +513,7 @@ class Gate4CleanDraftsUnchanged(CLI):
         code, rep, out = self.fin("x", "fine and clean\n")
         self.assertEqual((code, rep["errors"], rep["warnings"]), (0, [], []), rep)
         self.assertEqual(out, b"fine and clean\n")
-        for draft, bucket, msg in (("The the deploy\n", "errors", "repeated word"),
+        for draft, bucket, msg in (("The the deploy\n", "warnings", "repeated word"),
                                    ("ship it  today\n", "warnings", "two spaces between words"),
                                    ("run `make lint before push\n", "errors", "stray backtick")):
             with self.subTest(draft=draft):
@@ -511,6 +521,9 @@ class Gate4CleanDraftsUnchanged(CLI):
                 self.assertEqual(len(rep[bucket]), 1, rep)
                 self.assertIn(msg, rep[bucket][0])
                 self.assertEqual(code, 1 if bucket == "errors" else 0)
+        # a doubled word can be correct English, so it never blocks
+        code, _, out = self.fin("x", "I think that that approach works.\n")
+        self.assertEqual((code, out), (0, b"I think that that approach works.\n"))
         # code, inline code, tables and protected source text are not prose
         for src, draft in (("x", "```sh\necho the the  x `\n```\n"),
                            ("x", "run `a  b` and `the the`\n"),
