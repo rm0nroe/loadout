@@ -203,11 +203,11 @@ def snapshot(sources, contexts=()):
     A [[keep]] span is required exactly as many times as it is marked."""
     hits = [(kind, t, True) for text in sources for kind, t in _extract(text)]
     hits += [(kind, t, False) for text in contexts for kind, t in _extract(text)]
+    by_text = {}
+    for k, t, src in hits:
+        by_text.setdefault(t, []).append((k, src))
     spans = {}
-    for _, t, _ in hits:
-        if t in spans:
-            continue
-        mine = [(k, src) for k, tt, src in hits if tt == t]
+    for t, mine in by_text.items():
         kinds = [k for k, _ in mine]
         kind = "designated" if "designated" in kinds else kinds[0]
         required = kind == "designated" or any(src for _, src in mine)
@@ -519,7 +519,7 @@ def mechanical(text, channel, protected, template, allow, rules, subject_max=Non
 TABLE_ROW = re.compile(r"^[ \t]*\|.*$", re.M)
 INLINE_CODE = re.compile(r"(?<!`)(`+)(?!`).+?(?<!`)\1(?!`)")   # any matching backtick run: `x`, ``x``
 PROSE_CHECKS = [   # (pattern, message, is_error); mechanical only, never taste
-    (re.compile(r"\b([A-Za-z]+)[ \t]+\1\b", re.I), "repeated word", True),   # same line only
+    (re.compile(r"\b([A-Za-z]+)[ \t]+\1\b", re.I), "repeated word", False),   # same line only
     (re.compile(r"[^\s] {2,}[^\s]"), "two spaces between words", False),
     (re.compile(r"^[^`\n]*`[^`\n]*$", re.M), "stray backtick; inline code may be unclosed", True),
 ]
