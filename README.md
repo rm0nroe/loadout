@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner.svg" alt="Loadout: three field kits of agent skills for Claude Code and Codex, built for the task" width="100%">
+  <img src="assets/banner.svg" alt="Loadout: 13 agent skills in three field kits for Claude Code and Codex, built for the task" width="100%">
 </p>
 
 # loadout
