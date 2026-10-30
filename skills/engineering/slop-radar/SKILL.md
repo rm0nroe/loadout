@@ -9,7 +9,7 @@ Audit whether a frontend feels authored for its product or assembled from common
 
 **The brief overrides the baseline. Every tell is a heuristic, never a conviction by itself. Judge clusters and intent, not isolated stylistic choices.**
 
-This skill audits and reports. Do not edit the frontend unless the user separately asks for implementation.
+This skill audits and reports. Do not edit the frontend unless the user separately asks for implementation. For copy, report the pattern and quote it; route rewrites to the humanizer skill.
 
 ## Vocabulary
 
@@ -70,7 +70,8 @@ Use this as a detection baseline, not a ban list.
 | Area | Common tells |
 |---|---|
 | Color and material | Purple-to-blue gradients; gradient hero text; colored-border cards; glassmorphism cards; grain layered over gradients |
-| Typography and copy | Inter everywhere; emojis in headings; generic buzzword copy; serif italic accents; Space Grotesk paired with Instrument Serif; em dashes everywhere |
+| Typography | Inter everywhere; emojis in headings; serif italic accents; Space Grotesk paired with Instrument Serif |
+| Copy | Headline rhetoric ("Not just X. It's Y."); unsupported claims; interchangeable value props; buzzwords replacing concrete claims; em dashes in short UI copy. When the target has UI copy (headlines, value props, CTAs, pricing, empty states, errors), load [references/ui-copy.md](references/ui-copy.md) |
 | Composition | Three icon boxes in a row; a badge or eyebrow above the heading; untouched shadcn UI; inconsistent spacing |
 | Icons and motion | Lucide icons everywhere; fade-in on scroll; cursor-following beams; buttons that merely fade on hover |
 | Theme quality | Low-contrast dark mode |
@@ -99,13 +100,14 @@ Calibration example: the four identical outline hexagons in a compliance-claims 
 - One tell alone is weak evidence.
 - A cluster, repetition, or system-level default is stronger evidence.
 - A documented design system or explicit brief can justify a familiar convention.
+- Portability test: a hero, section, or claim that could move unchanged to a competitor's site, with nothing product-specific to explain it, weakens specificity and counts toward Defaultness. Concrete capabilities competitors also have (SSO, CSV export) are not tells.
 - Accessibility and usability failures are valid Fitness findings, but they are not evidence of AI authorship.
 - When a problem repeats, recommend the smallest shared correction, such as a token or shared component, instead of scattered cosmetic edits.
 
 Each finding must contain:
 
 1. **Location**: exact screen region, component, or `file:line`.
-2. **Evidence**: the observed tell or cluster.
+2. **Evidence**: the observed tell or cluster. For copy, quote the exact string.
 3. **Why it matters**: the product, clarity, trust, distinctiveness, or usability consequence.
 4. **Confidence**: `high`, `medium`, or `low`, with uncertainty stated plainly.
 5. **Smallest correction**: a concrete change that preserves working structure and intentional choices.
