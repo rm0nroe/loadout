@@ -280,8 +280,8 @@ def _find_candidates(draft, ndraft, nidx, span):
 # ------------------------------------------------------------ attribution
 
 AI_NAMES = (r"claude(?:[ -]code)?|codex|chatgpt|openai|anthropic|(?:github )?copilot|cursor|gemini|"
-            r"gpt[\w.-]*|windsurf|aider|devin|jules|grok|opencode|amp|llm|an? ai|ai(?: assistant)?")
-AI_RE = re.compile(r"\b(?:" + AI_NAMES + r")\b|\bbot\b|\[bot\]|\bagent\b|\bassistant\b|noreply@(?:anthropic|openai)\.com", re.I)
+            r"gpt[\w.-]*|windsurf|aider|grok|opencode|llm|an? ai|ai(?: assistant)?")
+AI_RE = re.compile(r"\b(?:" + AI_NAMES + r")\b|\bbot\b|\[bot\]|\bagent\b|\bassistant\b|noreply@(?:anthropic|openai)\.com|amp@ampcode\.com", re.I)
 TRAILER_LINE = re.compile(r"^[^\S\r\n]*(co-authored-by|assisted-by|generated-by|ai-by|ai-assisted(?:-by)?)\s*:[^\r\n]*(?:\r?\n|$)",
                           re.I | re.M)
 _PREP = (r"(?:with the (?:help|assistance|support) of|with (?:help|assistance|support) from|"
