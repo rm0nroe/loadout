@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Deterministic runner for the /write skill (Builds 1-3: Slack, PR title/body,
+"""Deterministic runner for the /write skill (Slack, PR title/body,
 PR comments, email, commit messages, release notes, postmortems, tickets,
 articles, docs).
 
@@ -19,7 +19,7 @@ network: drafting has no publishing side effects.
 
 Exit codes: 0 pass, 1 fixable lint errors (revise), 2 rejected
 (preservation or attribution conflict), 3 revision round limit,
-4 channel not drafted in this build, 64 usage or ambiguous request.
+64 usage, ambiguous request, or bad input file.
 """
 import argparse
 import json
@@ -31,21 +31,20 @@ from pathlib import Path
 
 SKILL_DIR = Path(__file__).resolve().parent.parent
 MAX_REVISION_ROUNDS = 2
-SHIPPED_BUILD = 3   # channels whose build is <= this are drafted
 
 # ---------------------------------------------------------------- routing
 
 ROUTES = {
-    "slack": {"ruleset": "ghostwriter", "card": "references/slack.md", "build": 1},
-    "pr": {"ruleset": "pr-creator", "card": "references/pr.md", "build": 1},
-    "pr-comment": {"ruleset": "ghostwriter", "card": "references/pr-comment.md", "build": 2},
-    "email": {"ruleset": "ghostwriter", "card": "references/email.md", "build": 2},
-    "commit": {"ruleset": "repo-conventions", "card": "references/commit.md", "build": 2},
-    "release-notes": {"ruleset": "sepia", "card": "references/release-notes.md", "build": 3},
-    "postmortem": {"ruleset": "sepia", "card": "references/postmortem.md", "build": 3},
-    "ticket": {"ruleset": "sepia", "card": "references/ticket.md", "build": 3},
-    "article": {"ruleset": "sepia", "card": "references/article.md", "build": 3},
-    "docs": {"ruleset": "sepia", "card": "references/docs.md", "build": 3},
+    "slack": {"ruleset": "ghostwriter", "card": "references/slack.md"},
+    "pr": {"ruleset": "pr-creator", "card": "references/pr.md"},
+    "pr-comment": {"ruleset": "ghostwriter", "card": "references/pr-comment.md"},
+    "email": {"ruleset": "ghostwriter", "card": "references/email.md"},
+    "commit": {"ruleset": "repo-conventions", "card": "references/commit.md"},
+    "release-notes": {"ruleset": "sepia", "card": "references/release-notes.md"},
+    "postmortem": {"ruleset": "sepia", "card": "references/postmortem.md"},
+    "ticket": {"ruleset": "sepia", "card": "references/ticket.md"},
+    "article": {"ruleset": "sepia", "card": "references/article.md"},
+    "docs": {"ruleset": "sepia", "card": "references/docs.md"},
 }
 
 # Order matters: more specific patterns claim their words first.
@@ -80,14 +79,8 @@ def route(channel=None, request=None):
                         "matches": found, "action": "ask which channel"}
     name = found[0]
     r = ROUTES[name]
-    out = {"channel": name, "ruleset": r["ruleset"], "build": r["build"],
-           "supported": r["build"] <= SHIPPED_BUILD, "mechanical": "runner finalize"}
-    if r["card"]:
-        out["card"] = str(SKILL_DIR / r["card"])
-    if not out["supported"]:
-        out["error"] = f"{name} ships in build {r['build']}; this build does not draft it"
-        return 4, out
-    return 0, out
+    return 0, {"channel": name, "ruleset": r["ruleset"], "card": str(SKILL_DIR / r["card"]),
+               "mechanical": "runner finalize"}
 
 
 # ------------------------------------------------------------------ voice
@@ -203,11 +196,11 @@ def snapshot(sources, contexts=()):
     A [[keep]] span is required exactly as many times as it is marked."""
     hits = [(kind, t, True) for text in sources for kind, t in _extract(text)]
     hits += [(kind, t, False) for text in contexts for kind, t in _extract(text)]
+    by_text = {}
+    for k, t, src in hits:
+        by_text.setdefault(t, []).append((k, src))
     spans = {}
-    for _, t, _ in hits:
-        if t in spans:
-            continue
-        mine = [(k, src) for k, tt, src in hits if tt == t]
+    for t, mine in by_text.items():
         kinds = [k for k, _ in mine]
         kind = "designated" if "designated" in kinds else kinds[0]
         required = kind == "designated" or any(src for _, src in mine)
@@ -280,8 +273,8 @@ def _find_candidates(draft, ndraft, nidx, span):
 # ------------------------------------------------------------ attribution
 
 AI_NAMES = (r"claude(?:[ -]code)?|codex|chatgpt|openai|anthropic|(?:github )?copilot|cursor|gemini|"
-            r"gpt[\w.-]*|windsurf|aider|devin|jules|grok|opencode|amp|llm|an? ai|ai(?: assistant)?")
-AI_RE = re.compile(r"\b(?:" + AI_NAMES + r")\b|\bbot\b|\[bot\]|\bagent\b|\bassistant\b|noreply@(?:anthropic|openai)\.com", re.I)
+            r"gpt[\w.-]*|windsurf|aider|grok|opencode|llm|an? ai|ai(?: assistant)?")
+AI_RE = re.compile(r"\b(?:" + AI_NAMES + r")\b|\bbot\b|\[bot\]|\bagent\b|\bassistant\b|noreply@(?:anthropic|openai)\.com|amp@ampcode\.com", re.I)
 TRAILER_LINE = re.compile(r"^[^\S\r\n]*(co-authored-by|assisted-by|generated-by|ai-by|ai-assisted(?:-by)?)\s*:[^\r\n]*(?:\r?\n|$)",
                           re.I | re.M)
 _PREP = (r"(?:with the (?:help|assistance|support) of|with (?:help|assistance|support) from|"
@@ -519,7 +512,7 @@ def mechanical(text, channel, protected, template, allow, rules, subject_max=Non
 TABLE_ROW = re.compile(r"^[ \t]*\|.*$", re.M)
 INLINE_CODE = re.compile(r"(?<!`)(`+)(?!`).+?(?<!`)\1(?!`)")   # any matching backtick run: `x`, ``x``
 PROSE_CHECKS = [   # (pattern, message, is_error); mechanical only, never taste
-    (re.compile(r"\b([A-Za-z]+)[ \t]+\1\b", re.I), "repeated word", True),   # same line only
+    (re.compile(r"\b([A-Za-z]+)[ \t]+\1\b", re.I), "repeated word", False),   # same line only
     (re.compile(r"[^\s] {2,}[^\s]"), "two spaces between words", False),
     (re.compile(r"^[^`\n]*`[^`\n]*$", re.M), "stray backtick; inline code may be unclosed", True),
 ]
@@ -676,7 +669,7 @@ def main(argv=None):
     g.add_argument("--channel")
     g.add_argument("--request")
     v = sub.add_parser("voice")
-    v.add_argument("--channel", required=True, choices=sorted(n for n, r in ROUTES.items() if r["build"] <= SHIPPED_BUILD))
+    v.add_argument("--channel", required=True, choices=sorted(ROUTES))
     s = sub.add_parser("snapshot")
     s.add_argument("--source", nargs="+", default=[], help="material the draft must carry")
     s.add_argument("--context", nargs="+", default=[], help="background; protected only where used")
@@ -729,4 +722,7 @@ def main(argv=None):
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    try:
+        sys.exit(main())
+    except (OSError, ValueError, KeyError, re.error) as e:
+        sys.exit(_die(64, {"error": f"{type(e).__name__}: {e}"}))
