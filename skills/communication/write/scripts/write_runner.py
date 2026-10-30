@@ -69,6 +69,10 @@ def route(channel=None, request=None):
         found = [channel]
     else:
         text = (request or "").lower()
+        # "a slack message about the jira ticket": the topic clause names the subject, not the channel
+        head = re.split(r"\b(?:about|for|regarding|announcing)\b", text, maxsplit=1)[0]
+        if any(re.search(p, head) for _, p in REQUEST_PATTERNS):
+            text = head
         found, claimed = [], text
         for name, pat in REQUEST_PATTERNS:
             if re.search(pat, claimed):
@@ -275,6 +279,10 @@ def _find_candidates(draft, ndraft, nidx, span):
 AI_NAMES = (r"claude(?:[ -]code)?|codex|chatgpt|openai|anthropic|(?:github )?copilot|cursor|gemini|"
             r"gpt[\w.-]*|windsurf|aider|grok|opencode|llm|an? ai|ai(?: assistant)?")
 AI_RE = re.compile(r"\b(?:" + AI_NAMES + r")\b|\bbot\b|\[bot\]|\bagent\b|\bassistant\b|noreply@(?:anthropic|openai)\.com|amp@ampcode\.com", re.I)
+# prose credits: the whole phrase names a tool, plus optional product or version words.
+# AI_RE above is for trailer name fields, where a bare "bot" or "agent" does mean a tool.
+AI_TOOL = re.compile(r"(?:(?:the|an?|our|my)\s+)?(?:" + AI_NAMES + r")(?:[\s-]+(?:code|cli|chat|desktop|app|pro|max|"
+                     r"mini|flash|opus|sonnet|haiku|agent|assistant|[\w.]*\d[\w.]*))*", re.I)
 TRAILER_LINE = re.compile(r"^[^\S\r\n]*(co-authored-by|assisted-by|generated-by|ai-by|ai-assisted(?:-by)?)\s*:[^\r\n]*(?:\r?\n|$)",
                           re.I | re.M)
 _PREP = (r"(?:with the (?:help|assistance|support) of|with (?:help|assistance|support) from|"
@@ -352,11 +360,13 @@ def _credited(prep, tool, vocab=frozenset()):
     short name goes, unless the user's own source or context supplied it:
     "Generated with sqlc." from their notes is a fact, not a byline. Callers pass
     no vocab for robot-marked or self-referential credits, which are bylines."""
-    if AI_RE.search(tool):
+    name = re.sub(r"\[([^\]]*)\]\([^)]*\)?", r"\1", tool)   # a markdown link credits its text
+    # the credited phrase must BE a tool name: "cursor pagination" and "the bot team" are not
+    if any(AI_TOOL.fullmatch(p.strip(" *_~")) for p in re.split(r",|&|\+|\band\b", name)):
         return True
-    if prep.lower() == "by" or not TOOL_TAIL.fullmatch(tool):
+    if prep.lower() == "by" or not TOOL_TAIL.fullmatch(name):
         return False
-    words = WORD.findall(tool.lower())
+    words = WORD.findall(name.lower())
     return not (words and all(w in vocab for w in words))
 
 
