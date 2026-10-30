@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Deterministic runner for the /write skill (Builds 1-3: Slack, PR title/body,
+"""Deterministic runner for the /write skill (Slack, PR title/body,
 PR comments, email, commit messages, release notes, postmortems, tickets,
 articles, docs).
 
@@ -19,7 +19,7 @@ network: drafting has no publishing side effects.
 
 Exit codes: 0 pass, 1 fixable lint errors (revise), 2 rejected
 (preservation or attribution conflict), 3 revision round limit,
-4 channel not drafted in this build, 64 usage or ambiguous request.
+64 usage, ambiguous request, or bad input file.
 """
 import argparse
 import json
@@ -31,21 +31,20 @@ from pathlib import Path
 
 SKILL_DIR = Path(__file__).resolve().parent.parent
 MAX_REVISION_ROUNDS = 2
-SHIPPED_BUILD = 3   # channels whose build is <= this are drafted
 
 # ---------------------------------------------------------------- routing
 
 ROUTES = {
-    "slack": {"ruleset": "ghostwriter", "card": "references/slack.md", "build": 1},
-    "pr": {"ruleset": "pr-creator", "card": "references/pr.md", "build": 1},
-    "pr-comment": {"ruleset": "ghostwriter", "card": "references/pr-comment.md", "build": 2},
-    "email": {"ruleset": "ghostwriter", "card": "references/email.md", "build": 2},
-    "commit": {"ruleset": "repo-conventions", "card": "references/commit.md", "build": 2},
-    "release-notes": {"ruleset": "sepia", "card": "references/release-notes.md", "build": 3},
-    "postmortem": {"ruleset": "sepia", "card": "references/postmortem.md", "build": 3},
-    "ticket": {"ruleset": "sepia", "card": "references/ticket.md", "build": 3},
-    "article": {"ruleset": "sepia", "card": "references/article.md", "build": 3},
-    "docs": {"ruleset": "sepia", "card": "references/docs.md", "build": 3},
+    "slack": {"ruleset": "ghostwriter", "card": "references/slack.md"},
+    "pr": {"ruleset": "pr-creator", "card": "references/pr.md"},
+    "pr-comment": {"ruleset": "ghostwriter", "card": "references/pr-comment.md"},
+    "email": {"ruleset": "ghostwriter", "card": "references/email.md"},
+    "commit": {"ruleset": "repo-conventions", "card": "references/commit.md"},
+    "release-notes": {"ruleset": "sepia", "card": "references/release-notes.md"},
+    "postmortem": {"ruleset": "sepia", "card": "references/postmortem.md"},
+    "ticket": {"ruleset": "sepia", "card": "references/ticket.md"},
+    "article": {"ruleset": "sepia", "card": "references/article.md"},
+    "docs": {"ruleset": "sepia", "card": "references/docs.md"},
 }
 
 # Order matters: more specific patterns claim their words first.
@@ -80,14 +79,8 @@ def route(channel=None, request=None):
                         "matches": found, "action": "ask which channel"}
     name = found[0]
     r = ROUTES[name]
-    out = {"channel": name, "ruleset": r["ruleset"], "build": r["build"],
-           "supported": r["build"] <= SHIPPED_BUILD, "mechanical": "runner finalize"}
-    if r["card"]:
-        out["card"] = str(SKILL_DIR / r["card"])
-    if not out["supported"]:
-        out["error"] = f"{name} ships in build {r['build']}; this build does not draft it"
-        return 4, out
-    return 0, out
+    return 0, {"channel": name, "ruleset": r["ruleset"], "card": str(SKILL_DIR / r["card"]),
+               "mechanical": "runner finalize"}
 
 
 # ------------------------------------------------------------------ voice
@@ -676,7 +669,7 @@ def main(argv=None):
     g.add_argument("--channel")
     g.add_argument("--request")
     v = sub.add_parser("voice")
-    v.add_argument("--channel", required=True, choices=sorted(n for n, r in ROUTES.items() if r["build"] <= SHIPPED_BUILD))
+    v.add_argument("--channel", required=True, choices=sorted(ROUTES))
     s = sub.add_parser("snapshot")
     s.add_argument("--source", nargs="+", default=[], help="material the draft must carry")
     s.add_argument("--context", nargs="+", default=[], help="background; protected only where used")
@@ -729,4 +722,7 @@ def main(argv=None):
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    try:
+        sys.exit(main())
+    except (OSError, ValueError, KeyError, re.error) as e:
+        sys.exit(_die(64, {"error": f"{type(e).__name__}: {e}"}))

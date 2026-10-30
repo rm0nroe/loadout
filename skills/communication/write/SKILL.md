@@ -51,6 +51,7 @@ The runner is `scripts/write_runner.py` (Python 3 stdlib; starts no other proces
    - 1: mechanical errors. Targeted fixes only, new candidate, next round.
    - 2: rejected (protected span missing, duplicated or ambiguous; attribution inside protected text). Fix the draft if the cause is yours; if the conflict is in the user's source, show the reason code and ask.
    - 3: two revision rounds spent. Deliver the last verified draft if one exists, otherwise report what is open.
+   - 64: bad input (missing file, malformed spans file or rules.json). Fix the input; do not revise the draft or spend a round.
 9. **Recheck meaning on the exact final text** whenever the report says `recheck_meaning: true` (a span was restored, attribution was stripped, or anything else changed bytes). Read `final.md` itself, not the candidate, against the claims list. A meaning problem is a review finding: it costs a revision round, and the fixed candidate goes back through step 8.
 10. **Deliver** `final.md` byte for byte in a fenced block. No further rewrite and no humanizer pass. Add one line covering any placeholder, omission, and reviewer note. Resolve any `possible-byline` warning before delivering: the runner kept a wrapped credit naming a tool the user supplied ("**Generated with sqlc.**"), so ask whether it is a fact or a byline. If it is a byline, remove it from the candidate and rerun `finalize` as the next round; deliver only the text that passed.
 

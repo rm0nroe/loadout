@@ -130,6 +130,30 @@ class Gate1NoPublishingSideEffects(CLI):
                                      f"{f.name}: {line}")
 
 
+class BadInputExits64(CLI):
+    """Bad input files exit 64 with a JSON error, never 1 (which means revise the draft)."""
+    def assert_bad_input(self, *args):
+        code, out = self.run_cli("finalize", "--channel", "slack", *args, "--out", self.tmp / "final.md")
+        self.assertEqual(code, 64, self.last_output)
+        self.assertIn("error", out)
+        self.assertNotIn(b"Traceback", self.last_output)
+
+    def spans(self):
+        self.assertEqual(self.run_cli("snapshot", "--source", self.put("s.txt", "hi"),
+                                      "--out", self.tmp / "spans.json")[0], 0)
+        return self.tmp / "spans.json"
+
+    def test_bad_rules_pattern(self):
+        rules = self.put("rules.json", '{"forbid":[{"pattern":"[","message":"x"}]}')
+        self.assert_bad_input("--spans", self.spans(), "--draft", self.put("d.md", "hi\n"), "--rules", rules)
+
+    def test_missing_draft(self):
+        self.assert_bad_input("--spans", self.spans(), "--draft", self.tmp / "nope.md")
+
+    def test_malformed_spans(self):
+        self.assert_bad_input("--spans", self.put("spans.json", "{not json"), "--draft", self.put("d.md", "hi\n"))
+
+
 class Gate2Routing(CLI):
     CASES = [
         ({"--channel": "slack"}, 0, "slack", "ghostwriter"),
@@ -160,7 +184,6 @@ class Gate2Routing(CLI):
                 self.assertEqual(code, want_code, out)
                 self.assertEqual(out["channel"], channel)
                 self.assertEqual(out["ruleset"], ruleset)
-                self.assertEqual(out["supported"], want_code == 0)
                 if want_code == 0:
                     self.assertTrue(Path(out["card"]).is_file())
 
