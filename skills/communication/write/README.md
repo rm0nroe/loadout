@@ -1,6 +1,6 @@
 # write skill
 
-Drafts Slack messages, emails and PR comments (Ghostwriter rules), PR titles and bodies (pr-creator rules), commit messages (repository conventions), and release notes, postmortems, tickets, articles and docs (Sepia rules) in the user's voice. It is drafting only and never sends, posts, commits, pushes, rebases or edits PRs.
+Drafts Slack messages, emails and PR comments (Ghostwriter rules), PR titles and bodies (pr-creator rules), commit messages (repository conventions), and release notes, postmortems, tickets, articles and docs (Sepia rules) in the user's voice. Optional questionnaire onboarding builds user-approved local profiles. It never sends, posts, commits, pushes, rebases or edits PRs.
 
 ## Layout
 
@@ -13,6 +13,7 @@ Drafts Slack messages, emails and PR comments (Ghostwriter rules), PR titles and
 | `references/pr.md` | PR rule set (pr-creator, adapted, drafting only) |
 | `references/review.md` | Pre-finalize review, independent review packet, post-finalize meaning recheck |
 | `references/voice.md` | Voice data root, approval rules for profiles and `rules.json` |
+| `references/onboarding.md` | Guided questionnaire, optional comparisons, example persona and approval before saving |
 | `scripts/write_runner.py` | `route`, `voice`, `snapshot`, `finalize` (stdlib only) |
 | `PROVENANCE.md`, `THIRD_PARTY_NOTICES.md` | Pinned upstream revisions, local changes, MIT notices |
 | `config/claude-settings.json` | Attribution source-off for Claude Code, passed per run with `--settings` |
@@ -35,3 +36,7 @@ Codex: point it at `SKILL.md` in the prompt, or copy the directory to `~/.codex/
 ## Voice data
 
 Lives in `$GHOSTWRITER_HOME` (default `~/.config/ghostwriter`), never in this repo. `rules.json` there holds the user's mechanical bans. With none, no punctuation is banned. Imports under `imports/` are unapproved candidate evidence.
+
+No author's persona ships with the skill. Without a profile, the channel cards provide general editorial guidance. To build your own, ask `$write set up my voice` in Codex, or `/loadout:write set up my voice` in the Claude Code plugin. The [questionnaire](references/onboarding.md) covers shared preferences and the channels you choose, with optional writing samples or paired examples. You review the proposed `persona.md` and channel files before anything is saved. Setup can be skipped or resumed later.
+
+When drafting, the skill reads `soul.md` if present, then the selected channel profile and any shared persona it references. Without a channel profile, it falls back to `persona.md` (or `$GHOSTWRITER_PERSONA`). Questionnaire answers and evaluation ratings are not automatically used as drafting instructions.

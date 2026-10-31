@@ -58,7 +58,7 @@ In Codex, invoke a copied skill as `$write`, `$relay`, or `$checkpoint-load`. St
 
 ## Communication
 
-- **write**: drafts Slack messages, emails, PR titles and bodies, review comments, commits, release notes, postmortems, tickets, articles and docs in your own voice. Keeps facts, code, identifiers and URLs byte-exact. Drafting only, never sends.
+- **write**: drafts Slack messages, emails, PR titles and bodies, review comments, commits, release notes, postmortems, tickets, articles and docs in your own voice. Keeps facts, code, identifiers and URLs byte-exact. Ask it to "set up my voice" for optional questionnaire onboarding; it proposes a private persona for your approval. No personal persona is bundled. Never sends.
 - **relay**: writes a message for someone who was not in the conversation, so you can forward it as a handoff.
 - **break-it-down**: rewrites the last reply as a direct explanation. Blunt point, numbered facts, the mix-up named, one rule. No metaphors.
 - **simplify**: explains the last reply with one everyday analogy and numbered roles.

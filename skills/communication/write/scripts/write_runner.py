@@ -108,8 +108,8 @@ def voice(channel):
     if not info["profile"] and persona.is_file():
         info["persona_fallback"] = str(persona)
     if not info["profile"]:
-        info["request"] = (f"No approved {channel} profile yet. Send 5-10 {channel} samples you wrote, "
-                           "tagged with date and whether AI helped.")
+        info["request"] = (f"No approved {channel} profile yet. You can say 'set up my voice' for the questionnaire, "
+                           f"or share 5-10 {channel} samples tagged with date and whether AI helped. Setup is optional.")
     if not info["rules"]:
         info["rules_note"] = "no rules.json: finalize applies no punctuation bans"
     return 0, info
