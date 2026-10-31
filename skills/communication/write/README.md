@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/banner.svg" alt="write: turn rough notes into clear drafts in your voice. Ready to paste, never sent." width="100%">
+</p>
+
 # write skill
 
 Drafts Slack messages, emails and PR comments (Ghostwriter rules), PR titles and bodies (pr-creator rules), commit messages (repository conventions), and release notes, postmortems, tickets, articles and docs (Sepia rules) in the user's voice. Optional questionnaire onboarding builds user-approved local profiles. It never sends, posts, commits, pushes, rebases or edits PRs.

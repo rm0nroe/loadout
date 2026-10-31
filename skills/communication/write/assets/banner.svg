@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 600" role="img" aria-label="write: your voice, ready to paste">
+  <title>write — your voice, ready to paste</title>
+  <desc>An editorial workbench: a rough note asking to move a review to Friday becomes a clear draft. A large italic write wordmark, coral proofreader marks, and overlapping paper sheets show the transformation. Drafting only; nothing is sent.</desc>
+  <!-- Wordmark: Instrument Serif Italic, SIL OFL 1.1; see INSTRUMENT-SERIF-OFL.txt. -->
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#20352F" stroke-opacity=".045"/></pattern>
+    <pattern id="rules" width="500" height="38" patternUnits="userSpaceOnUse"><path d="M0 37H500" fill="none" stroke="#20352F" stroke-opacity=".12"/></pattern>
+  </defs>
+  <rect width="1600" height="600" rx="24" fill="#F0EBDC"/>
+  <rect width="1600" height="600" rx="24" fill="url(#grid)"/>
+  <path d="M54 54h24m-12-12v24m1456-12h24m-12-12v24M54 546h24m-12-12v24m1456-12h24m-12-12v24" stroke="#20352F" stroke-width="2" opacity=".35"/>
+  <g font-family="Helvetica Neue, Helvetica, Arial, sans-serif" fill="#20352F">
+    <text x="96" y="82" font-size="17" letter-spacing="4">LOADOUT / COMMUNICATION</text>
+    <g transform="translate(90.0 330.0) scale(0.32360742705570295)"><path d="M137.0 9.0Q96.0 9.0 74.0 -23.0Q52.0 -55.0 66.0 -110.0L146.0 -412.0Q159.0 -459.0 130.0 -459.0Q109.0 -459.0 88.5 -429.0Q68.0 -399.0 44.0 -331.0Q40.0 -319.0 30.0 -319.0Q25.0 -319.0 22.0 -323.5Q19.0 -328.0 21.0 -335.0Q79.0 -516.0 166.0 -516.0Q200.0 -516.0 212.0 -488.0Q224.0 -460.0 211.0 -411.0L127.0 -92.0Q118.0 -58.0 126.0 -42.0Q134.0 -26.0 150.0 -26.0Q199.0 -26.0 259.5 -146.5Q320.0 -267.0 366.0 -499.0Q369.0 -510.0 380.0 -510.0H419.0Q433.0 -510.0 430.0 -497.0L350.0 -92.0Q343.0 -59.0 351.5 -42.5Q360.0 -26.0 379.0 -26.0Q408.0 -26.0 438.0 -54.0Q468.0 -82.0 492.5 -127.0Q517.0 -172.0 532.0 -226.0Q547.0 -280.0 547.0 -332.0Q547.0 -374.0 540.5 -398.5Q534.0 -423.0 527.0 -440.0Q520.0 -457.0 520.0 -477.0Q520.0 -516.0 554.0 -516.0Q578.0 -516.0 585.0 -489.5Q592.0 -463.0 592.0 -410.0Q592.0 -334.0 573.5 -259.5Q555.0 -185.0 523.5 -124.5Q492.0 -64.0 451.5 -27.5Q411.0 9.0 366.0 9.0Q323.0 9.0 300.0 -24.5Q277.0 -58.0 290.0 -122.0Q292.0 -129.0 287.5 -130.0Q283.0 -131.0 280.0 -125.0Q252.0 -69.0 217.0 -30.0Q182.0 9.0 137.0 9.0ZM673.0 0.0Q659.0 0.0 662.0 -13.0L757.0 -412.0Q762.0 -434.0 758.5 -446.5Q755.0 -459.0 740.0 -459.0Q722.0 -459.0 700.5 -432.5Q679.0 -406.0 652.0 -332.0Q648.0 -319.0 638.0 -319.0Q623.0 -319.0 630.0 -337.0Q652.0 -406.0 676.5 -445.0Q701.0 -484.0 726.0 -500.0Q751.0 -516.0 772.0 -516.0Q805.0 -516.0 819.0 -491.5Q833.0 -467.0 820.0 -411.0L809.0 -364.0Q808.0 -357.0 812.0 -356.0Q816.0 -355.0 819.0 -361.0Q857.0 -448.0 888.0 -482.0Q919.0 -516.0 959.0 -516.0Q986.0 -516.0 999.5 -501.5Q1013.0 -487.0 1013.0 -462.0Q1013.0 -437.0 1001.0 -422.0Q989.0 -407.0 970.0 -407.0Q954.0 -407.0 947.0 -415.0Q940.0 -423.0 936.5 -433.5Q933.0 -444.0 929.0 -452.0Q925.0 -460.0 916.0 -460.0Q901.0 -460.0 877.0 -422.0Q853.0 -384.0 825.5 -319.5Q798.0 -255.0 772.5 -175.0Q747.0 -95.0 728.0 -11.0Q725.0 0.0 714.0 0.0ZM1181.0 -605.0Q1162.0 -605.0 1149.5 -618.5Q1137.0 -632.0 1137.0 -651.0Q1137.0 -678.0 1153.5 -694.0Q1170.0 -710.0 1191.0 -710.0Q1211.0 -710.0 1224.5 -697.5Q1238.0 -685.0 1238.0 -665.0Q1238.0 -637.0 1221.0 -621.0Q1204.0 -605.0 1181.0 -605.0ZM1099.0 10.0Q1066.0 10.0 1052.0 -14.5Q1038.0 -39.0 1051.0 -95.0L1125.0 -412.0Q1130.0 -434.0 1126.5 -446.5Q1123.0 -459.0 1108.0 -459.0Q1090.0 -459.0 1068.5 -432.5Q1047.0 -406.0 1020.0 -332.0Q1016.0 -319.0 1006.0 -319.0Q991.0 -319.0 998.0 -337.0Q1020.0 -406.0 1044.5 -445.0Q1069.0 -484.0 1094.0 -500.0Q1119.0 -516.0 1140.0 -516.0Q1175.0 -516.0 1189.0 -491.5Q1203.0 -467.0 1190.0 -411.0L1116.0 -94.0Q1111.0 -72.0 1114.5 -59.5Q1118.0 -47.0 1133.0 -47.0Q1151.0 -47.0 1172.5 -73.5Q1194.0 -100.0 1221.0 -174.0Q1225.0 -187.0 1235.0 -187.0Q1250.0 -187.0 1243.0 -169.0Q1222.0 -101.0 1196.5 -61.5Q1171.0 -22.0 1146.0 -6.0Q1121.0 10.0 1099.0 10.0ZM1367.0 9.0Q1333.0 9.0 1314.0 -18.0Q1295.0 -45.0 1308.0 -105.0L1391.0 -467.0Q1394.0 -482.0 1379.0 -482.0H1341.0Q1327.0 -482.0 1327.0 -495.0Q1327.0 -502.0 1332.0 -506.0Q1337.0 -510.0 1344.0 -510.0H1380.0Q1403.0 -510.0 1407.0 -531.0L1431.0 -638.0Q1434.0 -649.0 1445.0 -649.0H1486.0Q1500.0 -649.0 1497.0 -636.0L1472.0 -525.0Q1469.0 -510.0 1484.0 -510.0H1541.0Q1558.0 -510.0 1558.0 -497.0Q1558.0 -482.0 1537.0 -482.0H1483.0Q1461.0 -482.0 1456.0 -461.0L1372.0 -95.0Q1367.0 -73.0 1373.5 -60.5Q1380.0 -48.0 1396.0 -48.0Q1419.0 -48.0 1438.5 -74.0Q1458.0 -100.0 1480.0 -173.0Q1484.0 -186.0 1493.0 -186.0Q1500.0 -186.0 1502.0 -180.0Q1504.0 -174.0 1499.0 -158.0Q1480.0 -90.0 1457.5 -54.0Q1435.0 -18.0 1412.0 -4.5Q1389.0 9.0 1367.0 9.0ZM1666.0 9.0Q1613.0 9.0 1581.0 -32.5Q1549.0 -74.0 1549.0 -150.0Q1549.0 -216.0 1572.5 -281.0Q1596.0 -346.0 1634.0 -399.0Q1672.0 -452.0 1717.5 -484.0Q1763.0 -516.0 1806.0 -516.0Q1853.0 -516.0 1873.5 -493.5Q1894.0 -471.0 1894.0 -433.0Q1894.0 -388.0 1862.5 -343.5Q1831.0 -299.0 1774.5 -264.0Q1718.0 -229.0 1642.0 -212.0Q1620.0 -207.0 1619.0 -187.0Q1618.0 -180.0 1618.0 -172.5Q1618.0 -165.0 1618.0 -158.0Q1618.0 -101.0 1637.5 -72.0Q1657.0 -43.0 1691.0 -43.0Q1729.0 -43.0 1764.5 -78.0Q1800.0 -113.0 1824.0 -177.0Q1827.0 -186.0 1836.0 -186.0Q1842.0 -186.0 1843.5 -181.0Q1845.0 -176.0 1843.0 -169.0Q1811.0 -81.0 1765.5 -36.0Q1720.0 9.0 1666.0 9.0ZM1629.0 -250.0Q1627.0 -243.0 1631.5 -238.5Q1636.0 -234.0 1643.0 -236.0Q1705.0 -253.0 1747.0 -287.5Q1789.0 -322.0 1810.5 -365.0Q1832.0 -408.0 1832.0 -449.0Q1832.0 -491.0 1799.0 -491.0Q1770.0 -491.0 1736.0 -457.0Q1702.0 -423.0 1673.0 -368.0Q1644.0 -313.0 1629.0 -250.0Z" fill="#20352F"/></g>
+    <path d="M105 359C260 339 475 346 676 328" fill="none" stroke="#E7654C" stroke-width="10" stroke-linecap="round"/>
+    <text x="99" y="419" font-size="36" font-weight="500">Your voice. Ready to paste.</text>
+    <text x="100" y="463" font-size="21" opacity=".8">Bring the facts. Keep the personality.</text>
+    <path d="M100 506h56" stroke="#20352F" stroke-width="2"/>
+    <text x="174" y="513" font-size="16" letter-spacing="2">10 FORMATS. NOTHING SENT.</text>
+
+    <!-- A hastily written source note, with visible editorial marks. -->
+    <g transform="translate(940 78) rotate(-6 240 100)">
+      <path d="M12 13H490V205H12Z" fill="#20352F" opacity=".12"/>
+      <path d="M0 0H480V186L469 192 458 186 447 192 436 186 425 192 414 186 403 192 392 186 381 192 370 186 359 192 348 186 337 192 326 186 315 192 304 186 293 192 282 186 271 192 260 186 249 192 238 186 227 192 216 186 205 192 194 186 183 192 172 186 161 192 150 186 139 192 128 186 117 192 106 186 95 192 84 186 73 192 62 186 51 192 40 186 29 192 18 186 7 192 0 186Z" fill="#FFFDF5"/>
+      <rect x="24" y="46" width="428" height="120" fill="url(#rules)"/>
+      <path d="M47 40V178" stroke="#E7654C" stroke-opacity=".45"/>
+      <text x="27" y="27" font-size="12" letter-spacing="2.5">THE ROUGH NOTE</text>
+      <g font-size="24" font-style="italic" font-family="Georgia, serif">
+        <text x="63" y="77">hey, quick thing...</text>
+        <text x="63" y="115">move the review to friday?</text>
+        <text x="63" y="153">draft needs another pass</text>
+      </g>
+      <path d="M57 70l200 2m-198 8 193-13" stroke="#E7654C" stroke-width="2.5"/>
+      <path d="M300 120q55 12 120-1" fill="none" stroke="#E7654C" stroke-width="3"/>
+      <path d="M211-10l90 4-3 34-90-4Z" fill="#C6DAD0" opacity=".9"/>
+    </g>
+
+    <!-- One continuous proofreader stroke carries the note into the finished draft. -->
+    <path d="M889 120C766 97 779 247 826 270C857 287 886 277 877 253C868 232 838 252 849 282L868 315" fill="none" stroke="#E7654C" stroke-width="5" stroke-linecap="round"/>
+    <path d="M848 305l24 14 4-29" fill="none" stroke="#E7654C" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <g transform="translate(870 320) rotate(2 300 104)">
+      <rect x="12" y="13" width="610" height="216" fill="#20352F" opacity=".12"/>
+      <rect width="610" height="216" fill="#FFFDF5"/>
+      <rect width="7" height="216" fill="#20352F"/>
+      <text x="33" y="37" font-size="12" letter-spacing="2.5">THE DRAFT / EMAIL</text>
+      <path d="M33 53H574" stroke="#20352F" stroke-opacity=".16"/>
+      <text x="33" y="93" font-size="25" font-weight="500">Could we move the review to Friday?</text>
+      <text x="33" y="131" font-size="25">The draft needs another pass.</text>
+      <path d="M34 177l8 8 15-19" fill="none" stroke="#20352F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="70" y="184" font-size="14" letter-spacing="1.3">SAME FACTS. CLEARER WORDS.</text>
+      <g transform="translate(491 162) rotate(-9)">
+        <rect x="-10" y="-14" width="90" height="43" rx="2" fill="#C6DAD0"/>
+        <text x="35" y="13" text-anchor="middle" font-size="17" font-weight="700" letter-spacing="2">YOURS</text>
+      </g>
+    </g>
+  </g>
+</svg>
