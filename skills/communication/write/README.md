@@ -4,7 +4,7 @@
 
 # write skill
 
-Drafts Slack messages, emails and PR comments (Ghostwriter rules), PR titles and bodies (pr-creator rules), commit messages (repository conventions), and release notes, postmortems, tickets, articles and docs (Sepia rules) in the user's voice. Optional questionnaire onboarding builds user-approved local profiles. It never sends, posts, commits, pushes, rebases or edits PRs.
+Drafts Slack messages, emails and PR comments (Ghostwriter rules), PR titles and bodies (pr-creator rules), commit messages (repository conventions), and release notes, postmortems, tickets, articles, docs and site copy (Sepia rules) in the user's voice. Optional questionnaire onboarding builds user-approved local profiles. It never sends, posts, commits, pushes, rebases or edits PRs.
 
 ## Layout
 
@@ -13,7 +13,7 @@ Drafts Slack messages, emails and PR comments (Ghostwriter rules), PR titles and
 | `SKILL.md` | The skill: routing, workflow, revision budget, attribution rules |
 | `references/slack.md`, `email.md`, `pr-comment.md`, `tells.md` | Ghostwriter rule sets (adapted) |
 | `references/commit.md` | Commit message card: convention comes from repo evidence |
-| `references/professional.md`, `release-notes.md`, `postmortem.md`, `ticket.md`, `article.md`, `docs.md` | Professional-document rule set (Sepia, adapted; docs card is local) |
+| `references/professional.md`, `release-notes.md`, `postmortem.md`, `ticket.md`, `article.md`, `docs.md`, `site-copy.md` | Professional-document rule set (Sepia, adapted; docs and site-copy cards are local) |
 | `references/pr.md` | PR rule set (pr-creator, adapted, drafting only) |
 | `references/review.md` | Pre-finalize review, independent review packet, post-finalize meaning recheck |
 | `references/voice.md` | Voice data root, approval rules for profiles and `rules.json` |

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Deterministic runner for the /write skill (Slack, PR title/body,
 PR comments, email, commit messages, release notes, postmortems, tickets,
-articles, docs).
+articles, docs, site copy).
 
 Commands:
   route     pick the rule set for a channel
@@ -45,6 +45,7 @@ ROUTES = {
     "ticket": {"ruleset": "sepia", "card": "references/ticket.md"},
     "article": {"ruleset": "sepia", "card": "references/article.md"},
     "docs": {"ruleset": "sepia", "card": "references/docs.md"},
+    "site-copy": {"ruleset": "sepia", "card": "references/site-copy.md"},
 }
 
 # Order matters: more specific patterns claim their words first.
@@ -59,6 +60,7 @@ REQUEST_PATTERNS = [
     ("slack", r"\bslack\b|\bdm\b|\bthread repl(y|ies)\b|\bstandup (update|post)\b"),
     ("article", r"\b(article|blog post|essay)\b"),
     ("docs", r"\b(docs|documentation|readme)\b"),
+    ("site-copy", r"\b(site|board|ui|product|page|web) copy\b|\bmicrocopy\b"),
 ]
 
 
