@@ -175,6 +175,11 @@ class Gate2Routing(CLI):
         ({"--request": "file a jira ticket for this"}, 0, "ticket", "sepia"),
         ({"--request": "write a blog post"}, 0, "article", "sepia"),
         ({"--request": "update the README for the new flag"}, 0, "docs", "sepia"),
+        ({"--request": "write the site copy for the pick card"}, 0, "site-copy", "sepia"),
+        ({"--request": "tighten this UI copy"}, 0, "site-copy", "sepia"),
+        ({"--request": "draft board copy for tonight"}, 0, "site-copy", "sepia"),
+        ({"--channel": "site-copy"}, 0, "site-copy", "sepia"),
+        ({"--request": "commit message for the UI copy change"}, 0, "commit", "repo-conventions"),
         # a channel word in the topic clause names the subject, not the deliverable
         ({"--request": "write a slack message about the jira ticket"}, 0, "slack", "ghostwriter"),
         ({"--request": "draft an email to Dana about ticket ACME-412"}, 0, "email", "ghostwriter"),
@@ -208,7 +213,7 @@ class Gate2Routing(CLI):
         pr_card = (REPO / "references" / "pr.md").read_text()
         self.assertNotIn("tells.md", pr_card)
         self.assertNotIn("tells.md", (REPO / "references" / "commit.md").read_text())
-        for card in ("professional", "release-notes", "postmortem", "ticket", "article", "docs"):
+        for card in ("professional", "release-notes", "postmortem", "ticket", "article", "docs", "site-copy"):
             self.assertNotIn("tells.md", (REPO / "references" / f"{card}.md").read_text())
         for card in ("slack", "email", "pr-comment"):
             self.assertRegex(skill, rf"references/{card}\.md`, then `references/tells\.md`")
@@ -906,8 +911,8 @@ class Gate6Build2Channels(CLI):
 
 
 class Gate7ProfessionalDocuments(CLI):
-    """Release notes, postmortems, tickets, articles and docs: cards, shape, long-form preservation."""
-    CHANNELS = ("release-notes", "postmortem", "ticket", "article", "docs")
+    """Release notes, postmortems, tickets, articles, docs and site copy: cards, shape, long-form preservation."""
+    CHANNELS = ("release-notes", "postmortem", "ticket", "article", "docs", "site-copy")
     URL = "https://status.example.com/incidents/2291"
     SRC = ("Postmortem inputs. Alert ACME-311 fired at [[keep]]14:07 UTC[[/keep]]. Dana wrote "
            '"Roll back the config, do not restart the pool" and linked ' + URL + ". The fix is in #412 "

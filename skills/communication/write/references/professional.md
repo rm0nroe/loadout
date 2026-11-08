@@ -1,6 +1,6 @@
 # Professional documents: shared pass (Sepia rules)
 
-Adapted from Sepia's professional pass (see `../PROVENANCE.md`). Read this first, then the document type's own card. It applies to release notes, postmortems, tickets, articles and docs. This card writes text. It never publishes, files, merges or sends; hand the text back. Sepia's premise, kept: professional prose shows its weakness in shape, not word choice. Conventional structure is fine; the defect is filler inside the structure. There is no detector target here and no "make it sound human" pass. The goal is text that carries information, takes a stance where one is needed, and reads like the person whose name is on it.
+Adapted from Sepia's professional pass (see `../PROVENANCE.md`). Read this first, then the document type's own card. It applies to release notes, postmortems, tickets, articles, docs and site copy. This card writes text. It never publishes, files, merges or sends; hand the text back. Sepia's premise, kept: professional prose shows its weakness in shape, not word choice. Conventional structure is fine; the defect is filler inside the structure. There is no detector target here and no "make it sound human" pass. The goal is text that carries information, takes a stance where one is needed, and reads like the person whose name is on it.
 
 ## Precedence
 

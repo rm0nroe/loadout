@@ -1,13 +1,13 @@
 ---
 name: write
-description: Drafts Slack messages, emails, PR titles and bodies, review comments, commit messages, release notes, postmortems, tickets, articles and docs in the user's voice, preserving facts and removing AI attribution. Use for writing, rewriting or tightening these formats, or when the user asks to set up their writing voice, build a persona, or take the writing questionnaire. Includes optional questionnaire onboarding with user-approved local profiles. Never sends, posts, commits, pushes or opens PRs.
+description: Drafts Slack messages, emails, PR titles and bodies, review comments, commit messages, release notes, postmortems, tickets, articles, docs and site or UI copy in the user's voice, preserving facts and removing AI attribution. Use for writing, rewriting or tightening these formats, or when the user asks to set up their writing voice, build a persona, or take the writing questionnaire. Includes optional questionnaire onboarding with user-approved local profiles. Never sends, posts, commits, pushes or opens PRs.
 ---
 
 # Drafting in Your Voice
 
 Write the finished text as the user would have written it. The user brings facts, a ramble, a diff or a draft; you return text ready to paste. Nothing in it is invented. The runner works locally, but drafting and review run through the model, so source material you pass along is processed remotely like any other prompt.
 
-The skill covers ten channels, each with exactly one editorial rule set:
+The skill covers eleven channels, each with exactly one editorial rule set:
 
 | Channel | Rule set | Read |
 |---|---|---|
@@ -16,7 +16,7 @@ The skill covers ten channels, each with exactly one editorial rule set:
 | PR comment or reply | Ghostwriter | `references/pr-comment.md`, then `references/tells.md` |
 | PR title and body | pr-creator | `references/pr.md` only |
 | Commit message | repository conventions | `references/commit.md` only |
-| Release notes, postmortem, ticket, article, docs | Sepia | `references/professional.md`, then that document's own card: `release-notes.md`, `postmortem.md`, `ticket.md`, `article.md` or `docs.md`. Never `tells.md` |
+| Release notes, postmortem, ticket, article, docs, site copy | Sepia | `references/professional.md`, then that document's own card: `release-notes.md`, `postmortem.md`, `ticket.md`, `article.md`, `docs.md` or `site-copy.md`. Never `tells.md` |
 
 `tells.md` applies to the three Ghostwriter channels only, never to PR titles/bodies or commit messages. The runner's checks are mechanical only; they never carry editorial taste.
 
@@ -37,7 +37,7 @@ For "set up my voice", "build my persona", "onboard me" or a questionnaire reque
 
 The runner is `scripts/write_runner.py` (Python 3 stdlib; starts no other process). Paths are relative to this skill's directory. Put working files in a scratch directory, never in the user's repo.
 
-1. **Route.** `python3 scripts/write_runner.py route --request "<the user's ask>"` (or `--channel slack|email|pr-comment|pr|commit|release-notes|postmortem|ticket|article|docs`). Exit 0 gives the rule set and card. Exit 64: ambiguous, ask which channel.
+1. **Route.** `python3 scripts/write_runner.py route --request "<the user's ask>"` (or `--channel slack|email|pr-comment|pr|commit|release-notes|postmortem|ticket|article|docs|site-copy`). Exit 0 gives the rule set and card. Exit 64: ambiguous, ask which channel.
 2. **Read the channel's files** from the table above, and nothing from another channel. Gather that card's read-only facts: the thread for a comment, the reply context for an email, the staged diff and recent history for a commit, the release range for release notes, the incident data for a postmortem, the code for docs. Professional documents also read 2 or 3 venue samples, and a long article, postmortem or doc gets the outline check in `professional.md`. Research only when the claims need a source the user did not supply, and cite only what was read.
 3. **Voice.** `voice --channel <channel>`. Read the approved profile it reports (`soul.md`, then `<channel>.md`), including any shared persona the channel profile references. With no channel profile, use the reported persona fallback; with neither, use the channel card and any existing `soul.md`. Say which fallback was used and offer the questionnaire or samples in one line after the draft, without interrupting a writing request or repeating an offer declined in this conversation. `candidate_corpora` are unapproved imports: never read them while drafting. See `references/voice.md`.
 4. **Snapshot.** Save what the draft must carry (the user's facts, the quote they want kept, the ticket) as source, and background (full diff, logs, long threads) as context:
